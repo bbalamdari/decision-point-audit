@@ -1,0 +1,126 @@
+{
+ "adapters": [
+  "r13_s375_a16",
+  "r13_s375_a32",
+  "r13_s375_a8"
+ ],
+ "loss": {},
+ "behaviour": {
+  "pre_edit": {
+   "base": {
+    "counts": {
+     "command": 35,
+     "truncated": 2,
+     "edit": 12,
+     "read": 11
+    },
+    "n": 60,
+    "seconds": 243,
+    "teacher_next": {
+     "edit": 30
+    }
+   },
+   "r13_s375_a16": {
+    "counts": {
+     "command": 28,
+     "edit": 21,
+     "read": 9,
+     "truncated": 2
+    },
+    "n": 60,
+    "seconds": 225,
+    "teacher_next": {
+     "edit": 30
+    }
+   },
+   "r13_s375_a32": {
+    "counts": {
+     "command": 28,
+     "edit": 21,
+     "read": 9,
+     "other_text": 2
+    },
+    "n": 60,
+    "seconds": 228,
+    "teacher_next": {
+     "edit": 30
+    }
+   },
+   "r13_s375_a8": {
+    "counts": {
+     "command": 26,
+     "edit": 17,
+     "read": 15,
+     "truncated": 2
+    },
+    "n": 60,
+    "seconds": 233,
+    "teacher_next": {
+     "edit": 30
+    }
+   }
+  },
+  "post_edit": {
+   "base": {
+    "counts": {
+     "command": 37,
+     "read": 7,
+     "edit": 16
+    },
+    "n": 60,
+    "seconds": 164,
+    "teacher_next": {
+     "edit": 8,
+     "command": 21,
+     "read": 1
+    }
+   },
+   "r13_s375_a16": {
+    "counts": {
+     "command": 38,
+     "edit": 15,
+     "other_text": 7
+    },
+    "n": 60,
+    "seconds": 189,
+    "teacher_next": {
+     "edit": 8,
+     "command": 21,
+     "read": 1
+    }
+   },
+   "r13_s375_a32": {
+    "counts": {
+     "command": 36,
+     "edit": 11,
+     "read": 1,
+     "other_text": 12
+    },
+    "n": 60,
+    "seconds": 265,
+    "teacher_next": {
+     "edit": 8,
+     "command": 21,
+     "read": 1
+    }
+   },
+   "r13_s375_a8": {
+    "counts": {
+     "command": 39,
+     "read": 2,
+     "other_text": 3,
+     "edit": 16
+    },
+    "n": 60,
+    "seconds": 181,
+    "teacher_next": {
+     "edit": 8,
+     "command": 21,
+     "read": 1
+    }
+   }
+  }
+ },
+ "notes": [],
+ "total_min": 42.8
+}

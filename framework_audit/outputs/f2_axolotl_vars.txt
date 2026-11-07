@@ -1,0 +1,5 @@
+EOS token '<eos>' not found in chat_template; the turn terminator won't be trained. Set `eot_tokens` to your template's turn-ending token.
+gemma4 ['content', 'get', 'role']
+  kept keys per turn: [['content', 'role'], ['content', 'role'], ['content', 'reasoning_content', 'role'], ['content', 'role'], ['content', 'reasoning_content', 'role'], ['content', 'role'], ['content', 'role']]
+qwen3 ['content', 'endswith', 'reasoning_content', 'role', 'startswith', 'tool_calls']
+  kept keys per turn: [['content', 'role'], ['content', 'role'], ['content', 'reasoning_content', 'role', 'tool_calls'], ['content', 'role'], ['content', 'reasoning_content', 'role', 'tool_calls'], ['content', 'role'], ['content', 'role']]

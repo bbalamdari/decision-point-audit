@@ -1,0 +1,192 @@
+
+=== Unsloth gemma4 HF-hub template parts=('<|turn>user\n', '<|turn>model\n') {} final_thought=False
+  pos  166 next=['<|channel>', 'thought', '\n'] supervised=[True, True, True] first_supervised_offset=0
+  pos  219 next=['<|channel>', 'thought', '\n'] supervised=[True, True, True] first_supervised_offset=0
+  pos  286 next=['Fixed', '▁the', '▁issue'] supervised=[True, True, True] first_supervised_offset=0
+  prefix: {"msg": 4, "prompt_len": 222, "prefix_ok": true, "divergence": null, "prompt_tail": "<|\"|>}<tool_response|><|channel>thought\n"}
+  |"|>,<|"|>old<|"|>,<|"|>new<|"|>],type:<|"|>OBJECT<|"|>}}<tool|><turn|>
+<|turn>user
+Fix the failing test in calc.py.<turn|>
+<|turn>model
+[[<|channel>thought
+I should run the tests first.
+<channel|><|tool_call>call:run_command{command:<|"|>pytest -q<|"|>}<tool_call|><|tool_response>response:run_command{value:<|"|>FAILED test_add: expected 3, got 4<|"|>}<tool_response|><|channel>thought
+add() uses a+b+1; remove the +1.
+<channel|><|tool_call>call:edit_file{new:<|"|>a+b<|"|>,old:<|"|>a+b+1<|"|>,path:<|"|>calc.py<|"|>}<tool_call|><|tool_response>response:edit_file{value:<|"|>ok<|"|>}<tool_response|>Fixed the issue: add() now returns a+b.<turn|>
+]]
+
+=== Unsloth gemma4 HF-hub template parts=('<|turn>user\n', '<|turn>model\n') {'last_response_only': True} final_thought=False
+  pos  166 next=['<|channel>', 'thought', '\n'] supervised=[True, True, True] first_supervised_offset=0
+  pos  219 next=['<|channel>', 'thought', '\n'] supervised=[True, True, True] first_supervised_offset=0
+  pos  286 next=['Fixed', '▁the', '▁issue'] supervised=[True, True, True] first_supervised_offset=0
+  prefix: {"msg": 4, "prompt_len": 222, "prefix_ok": true, "divergence": null, "prompt_tail": "<|\"|>}<tool_response|><|channel>thought\n"}
+
+=== Unsloth gemma4 HF-hub template parts=('<|turn>user\n', '<|turn>model\n') {} final_thought=True
+  pos  166 next=['<|channel>', 'thought', '\n'] supervised=[True, True, True] first_supervised_offset=0
+  pos  219 next=['<|channel>', 'thought', '\n'] supervised=[True, True, True] first_supervised_offset=0
+  pos  286 next=['<|channel>', 'thought', '\n'] supervised=[True, True, True] first_supervised_offset=0
+  prefix: {"msg": 4, "prompt_len": 222, "prefix_ok": true, "divergence": null, "prompt_tail": "<|\"|>}<tool_response|><|channel>thought\n"}
+
+=== Unsloth gemma4 HF-hub template parts=('<|turn>user\n', '<|turn>model\n') {'last_response_only': True} final_thought=True
+  pos  166 next=['<|channel>', 'thought', '\n'] supervised=[True, True, True] first_supervised_offset=0
+  pos  219 next=['<|channel>', 'thought', '\n'] supervised=[True, True, True] first_supervised_offset=0
+  pos  286 next=['<|channel>', 'thought', '\n'] supervised=[True, True, True] first_supervised_offset=0
+  prefix: {"msg": 4, "prompt_len": 222, "prefix_ok": true, "divergence": null, "prompt_tail": "<|\"|>}<tool_response|><|channel>thought\n"}
+Unsloth: Auto-detected instruction_part = '<|turn>user\n' and response_part = '<|turn>model\n'
+
+=== Unsloth gemma4 HF-hub template parts=auto {} final_thought=False
+  pos  166 next=['<|channel>', 'thought', '\n'] supervised=[True, True, True] first_supervised_offset=0
+  pos  219 next=['<|channel>', 'thought', '\n'] supervised=[True, True, True] first_supervised_offset=0
+  pos  286 next=['Fixed', '▁the', '▁issue'] supervised=[True, True, True] first_supervised_offset=0
+  prefix: {"msg": 4, "prompt_len": 222, "prefix_ok": true, "divergence": null, "prompt_tail": "<|\"|>}<tool_response|><|channel>thought\n"}
+  |"|>,<|"|>old<|"|>,<|"|>new<|"|>],type:<|"|>OBJECT<|"|>}}<tool|><turn|>
+<|turn>user
+Fix the failing test in calc.py.<turn|>
+<|turn>model
+[[<|channel>thought
+I should run the tests first.
+<channel|><|tool_call>call:run_command{command:<|"|>pytest -q<|"|>}<tool_call|><|tool_response>response:run_command{value:<|"|>FAILED test_add: expected 3, got 4<|"|>}<tool_response|><|channel>thought
+add() uses a+b+1; remove the +1.
+<channel|><|tool_call>call:edit_file{new:<|"|>a+b<|"|>,old:<|"|>a+b+1<|"|>,path:<|"|>calc.py<|"|>}<tool_call|><|tool_response>response:edit_file{value:<|"|>ok<|"|>}<tool_response|>Fixed the issue: add() now returns a+b.<turn|>
+]]
+Unsloth: Auto-detected instruction_part = '<|turn>user\n' and response_part = '<|turn>model\n'
+
+=== Unsloth gemma4 HF-hub template parts=auto {'last_response_only': True} final_thought=False
+  pos  166 next=['<|channel>', 'thought', '\n'] supervised=[True, True, True] first_supervised_offset=0
+  pos  219 next=['<|channel>', 'thought', '\n'] supervised=[True, True, True] first_supervised_offset=0
+  pos  286 next=['Fixed', '▁the', '▁issue'] supervised=[True, True, True] first_supervised_offset=0
+  prefix: {"msg": 4, "prompt_len": 222, "prefix_ok": true, "divergence": null, "prompt_tail": "<|\"|>}<tool_response|><|channel>thought\n"}
+Unsloth: Auto-detected instruction_part = '<|turn>user\n' and response_part = '<|turn>model\n'
+
+=== Unsloth gemma4 HF-hub template parts=auto {} final_thought=True
+  pos  166 next=['<|channel>', 'thought', '\n'] supervised=[True, True, True] first_supervised_offset=0
+  pos  219 next=['<|channel>', 'thought', '\n'] supervised=[True, True, True] first_supervised_offset=0
+  pos  286 next=['<|channel>', 'thought', '\n'] supervised=[True, True, True] first_supervised_offset=0
+  prefix: {"msg": 4, "prompt_len": 222, "prefix_ok": true, "divergence": null, "prompt_tail": "<|\"|>}<tool_response|><|channel>thought\n"}
+Unsloth: Auto-detected instruction_part = '<|turn>user\n' and response_part = '<|turn>model\n'
+
+=== Unsloth gemma4 HF-hub template parts=auto {'last_response_only': True} final_thought=True
+  pos  166 next=['<|channel>', 'thought', '\n'] supervised=[True, True, True] first_supervised_offset=0
+  pos  219 next=['<|channel>', 'thought', '\n'] supervised=[True, True, True] first_supervised_offset=0
+  pos  286 next=['<|channel>', 'thought', '\n'] supervised=[True, True, True] first_supervised_offset=0
+  prefix: {"msg": 4, "prompt_len": 222, "prefix_ok": true, "divergence": null, "prompt_tail": "<|\"|>}<tool_response|><|channel>thought\n"}
+
+=== Unsloth gemma4 unsloth 'gemma-4' template parts=('<|turn>user\n', '<|turn>model\n') {} final_thought=False
+  pos  165 next=['<|channel>', 'thought', '\n'] supervised=[True, True, True] first_supervised_offset=0
+  pos  218 next=['<|channel>', 'thought', '\n'] supervised=[True, True, True] first_supervised_offset=0
+  pos  285 next=['Fixed', '▁the', '▁issue'] supervised=[True, True, True] first_supervised_offset=0
+  prefix: {"msg": 4, "prompt_len": 221, "prefix_ok": true, "divergence": null, "prompt_tail": "<|\"|>}<tool_response|><|channel>thought\n"}
+  |"|>,<|"|>old<|"|>,<|"|>new<|"|>],type:<|"|>OBJECT<|"|>}}<tool|><turn|>
+<|turn>user
+Fix the failing test in calc.py.<turn|>
+<|turn>model
+[[<|channel>thought
+I should run the tests first.
+<channel|><|tool_call>call:run_command{command:<|"|>pytest -q<|"|>}<tool_call|><|tool_response>response:run_command{value:<|"|>FAILED test_add: expected 3, got 4<|"|>}<tool_response|><|channel>thought
+add() uses a+b+1; remove the +1.
+<channel|><|tool_call>call:edit_file{new:<|"|>a+b<|"|>,old:<|"|>a+b+1<|"|>,path:<|"|>calc.py<|"|>}<tool_call|><|tool_response>response:edit_file{value:<|"|>ok<|"|>}<tool_response|>Fixed the issue: add() now returns a+b.<turn|>
+]]
+
+=== Unsloth gemma4 unsloth 'gemma-4' template parts=('<|turn>user\n', '<|turn>model\n') {'last_response_only': True} final_thought=False
+  pos  165 next=['<|channel>', 'thought', '\n'] supervised=[True, True, True] first_supervised_offset=0
+  pos  218 next=['<|channel>', 'thought', '\n'] supervised=[True, True, True] first_supervised_offset=0
+  pos  285 next=['Fixed', '▁the', '▁issue'] supervised=[True, True, True] first_supervised_offset=0
+  prefix: {"msg": 4, "prompt_len": 221, "prefix_ok": true, "divergence": null, "prompt_tail": "<|\"|>}<tool_response|><|channel>thought\n"}
+
+=== Unsloth gemma4 unsloth 'gemma-4' template parts=('<|turn>user\n', '<|turn>model\n') {} final_thought=True
+  pos  165 next=['<|channel>', 'thought', '\n'] supervised=[True, True, True] first_supervised_offset=0
+  pos  218 next=['<|channel>', 'thought', '\n'] supervised=[True, True, True] first_supervised_offset=0
+  pos  285 next=['<|channel>', 'thought', '\n'] supervised=[True, True, True] first_supervised_offset=0
+  prefix: {"msg": 4, "prompt_len": 221, "prefix_ok": true, "divergence": null, "prompt_tail": "<|\"|>}<tool_response|><|channel>thought\n"}
+
+=== Unsloth gemma4 unsloth 'gemma-4' template parts=('<|turn>user\n', '<|turn>model\n') {'last_response_only': True} final_thought=True
+  pos  165 next=['<|channel>', 'thought', '\n'] supervised=[True, True, True] first_supervised_offset=0
+  pos  218 next=['<|channel>', 'thought', '\n'] supervised=[True, True, True] first_supervised_offset=0
+  pos  285 next=['<|channel>', 'thought', '\n'] supervised=[True, True, True] first_supervised_offset=0
+  prefix: {"msg": 4, "prompt_len": 221, "prefix_ok": true, "divergence": null, "prompt_tail": "<|\"|>}<tool_response|><|channel>thought\n"}
+
+=== Unsloth gemma4 unsloth 'gemma-4-thinking' template parts=('<|turn>user\n', '<|turn>model\n') {} final_thought=False
+  pos  165 next=['<|tool_call>', 'call', ':'] supervised=[True, True, True] first_supervised_offset=0
+  pos  206 next=['<|tool_call>', 'call', ':'] supervised=[True, True, True] first_supervised_offset=0
+  pos  254 next=['Fixed', '▁the', '▁issue'] supervised=[True, True, True] first_supervised_offset=0
+  prefix: {"msg": 4, "prompt_len": 209, "prefix_ok": false, "divergence": {"at": 206, "prompt_has": "<|channel>thought\n", "train_has": "<|tool_call>call:edit_file{new:<|\"|>a+"}, "prompt_tail": "<|\"|>}<tool_response|><|channel>thought\n"}
+  <|"|>old text<|"|>,type:<|"|>STRING<|"|>},path:{description:<|"|>file<|"|>,type:<|"|>STRING<|"|>}},required:[<|"|>path<|"|>,<|"|>old<|"|>,<|"|>new<|"|>],type:<|"|>OBJECT<|"|>}}<tool|><turn|>
+<|turn>user
+Fix the failing test in calc.py.<turn|>
+<|turn>model
+[[<|tool_call>call:run_command{command:<|"|>pytest -q<|"|>}<tool_call|><|tool_response>response:run_command{value:<|"|>FAILED test_add: expected 3, got 4<|"|>}<tool_response|><|tool_call>call:edit_file{new:<|"|>a+b<|"|>,old:<|"|>a+b+1<|"|>,path:<|"|>calc.py<|"|>}<tool_call|><|tool_response>response:edit_file{value:<|"|>ok<|"|>}<tool_response|>Fixed the issue: add() now returns a+b.<turn|>
+]]
+
+=== Unsloth gemma4 unsloth 'gemma-4-thinking' template parts=('<|turn>user\n', '<|turn>model\n') {'last_response_only': True} final_thought=False
+  pos  165 next=['<|tool_call>', 'call', ':'] supervised=[True, True, True] first_supervised_offset=0
+  pos  206 next=['<|tool_call>', 'call', ':'] supervised=[True, True, True] first_supervised_offset=0
+  pos  254 next=['Fixed', '▁the', '▁issue'] supervised=[True, True, True] first_supervised_offset=0
+  prefix: {"msg": 4, "prompt_len": 209, "prefix_ok": false, "divergence": {"at": 206, "prompt_has": "<|channel>thought\n", "train_has": "<|tool_call>call:edit_file{new:<|\"|>a+"}, "prompt_tail": "<|\"|>}<tool_response|><|channel>thought\n"}
+
+=== Unsloth gemma4 unsloth 'gemma-4-thinking' template parts=('<|turn>user\n', '<|turn>model\n') {} final_thought=True
+  pos  165 next=['<|tool_call>', 'call', ':'] supervised=[True, True, True] first_supervised_offset=0
+  pos  206 next=['<|tool_call>', 'call', ':'] supervised=[True, True, True] first_supervised_offset=0
+  pos  254 next=['Fixed', '▁the', '▁issue'] supervised=[True, True, True] first_supervised_offset=0
+  prefix: {"msg": 4, "prompt_len": 209, "prefix_ok": false, "divergence": {"at": 206, "prompt_has": "<|channel>thought\n", "train_has": "<|tool_call>call:edit_file{new:<|\"|>a+"}, "prompt_tail": "<|\"|>}<tool_response|><|channel>thought\n"}
+
+=== Unsloth gemma4 unsloth 'gemma-4-thinking' template parts=('<|turn>user\n', '<|turn>model\n') {'last_response_only': True} final_thought=True
+  pos  165 next=['<|tool_call>', 'call', ':'] supervised=[True, True, True] first_supervised_offset=0
+  pos  206 next=['<|tool_call>', 'call', ':'] supervised=[True, True, True] first_supervised_offset=0
+  pos  254 next=['Fixed', '▁the', '▁issue'] supervised=[True, True, True] first_supervised_offset=0
+  prefix: {"msg": 4, "prompt_len": 209, "prefix_ok": false, "divergence": {"at": 206, "prompt_has": "<|channel>thought\n", "train_has": "<|tool_call>call:edit_file{new:<|\"|>a+"}, "prompt_tail": "<|\"|>}<tool_response|><|channel>thought\n"}
+
+=== Unsloth qwen3 HF-hub template parts=('<|im_start|>user\n', '<|im_start|>assistant\n') {} final_thought=False
+  pos  265 next=['<think>', 'Ċ', 'I'] supervised=[True, True, True] first_supervised_offset=0
+  pos  322 next=['<think>', 'Ċ', 'add'] supervised=[True, True, True] first_supervised_offset=0
+  pos  390 next=['<think>', 'ĊĊ', '</think>'] supervised=[True, True, True] first_supervised_offset=0
+  prefix: {"msg": 4, "prompt_len": 322, "prefix_ok": true, "divergence": null, "prompt_tail": "</tool_response><|im_end|>\n<|im_start|>assistant\n"}
+  test in calc.py.<|im_end|>
+<|im_start|>assistant
+[[<think>
+I should run the tests first.
+</think>
+
+<tool_call>
+{"name": "run_command", "arguments": {"command": "pytest -q"}}
+</tool_call><|im_end|>]]
+<|im_start|>user
+<tool_response>
+FAILED test_add: expected 3, got 4
+</tool_response><|im_end|>
+<|im_start|>assistant
+[[<think>
+add() uses a+b+1; remove the +1.
+</think>
+
+<tool_call>
+{"name": "edit_file", "arguments": {"path": "calc.py", "old": "a+b+1", "new": "a+b"}}
+</tool_call><|im_end|>]]
+<|im_start|>user
+<tool_response>
+ok
+</tool_response><|im_end|>
+<|im_start|>assistant
+[[<think>
+
+</think>
+
+Fixed the issue: add() now returns a+b.<|im_end|>]]
+
+
+=== Unsloth qwen3 HF-hub template parts=('<|im_start|>user\n', '<|im_start|>assistant\n') {'last_response_only': True} final_thought=False
+  pos  265 next=['<think>', 'Ċ', 'I'] supervised=[False, False, False] first_supervised_offset=125
+  pos  322 next=['<think>', 'Ċ', 'add'] supervised=[False, False, False] first_supervised_offset=68
+  pos  390 next=['<think>', 'ĊĊ', '</think>'] supervised=[True, True, True] first_supervised_offset=0
+  prefix: {"msg": 4, "prompt_len": 322, "prefix_ok": true, "divergence": null, "prompt_tail": "</tool_response><|im_end|>\n<|im_start|>assistant\n"}
+
+=== Unsloth qwen3 HF-hub template parts=('<|im_start|>user\n', '<|im_start|>assistant\n') {} final_thought=True
+  pos  265 next=['<think>', 'Ċ', 'I'] supervised=[True, True, True] first_supervised_offset=0
+  pos  322 next=['<think>', 'Ċ', 'add'] supervised=[True, True, True] first_supervised_offset=0
+  pos  390 next=['<think>', 'Ċ', 'The'] supervised=[True, True, True] first_supervised_offset=0
+  prefix: {"msg": 4, "prompt_len": 322, "prefix_ok": true, "divergence": null, "prompt_tail": "</tool_response><|im_end|>\n<|im_start|>assistant\n"}
+
+=== Unsloth qwen3 HF-hub template parts=('<|im_start|>user\n', '<|im_start|>assistant\n') {'last_response_only': True} final_thought=True
+  pos  265 next=['<think>', 'Ċ', 'I'] supervised=[False, False, False] first_supervised_offset=125
+  pos  322 next=['<think>', 'Ċ', 'add'] supervised=[False, False, False] first_supervised_offset=68
+  pos  390 next=['<think>', 'Ċ', 'The'] supervised=[True, True, True] first_supervised_offset=0
+  prefix: {"msg": 4, "prompt_len": 322, "prefix_ok": true, "divergence": null, "prompt_tail": "</tool_response><|im_end|>\n<|im_start|>assistant\n"}

@@ -1,0 +1,1682 @@
+[
+ {
+  "environment": "old",
+  "run": "v1.7 + zero adapter",
+  "solved": 8,
+  "tasks": 20,
+  "per_task": [
+   {
+    "instance_id": "fastapi_15661",
+    "resolved": false,
+    "tool_calls": 23,
+    "agent_patch_size": 1921,
+    "duration_seconds": 341.94,
+    "error": null
+   },
+   {
+    "instance_id": "rich_4070",
+    "resolved": false,
+    "tool_calls": 28,
+    "agent_patch_size": 1845,
+    "duration_seconds": 259.52,
+    "error": null
+   },
+   {
+    "instance_id": "rich_4077",
+    "resolved": true,
+    "tool_calls": 25,
+    "agent_patch_size": 396,
+    "duration_seconds": 275.6,
+    "error": null
+   },
+   {
+    "instance_id": "fastapi_14873",
+    "resolved": true,
+    "tool_calls": 27,
+    "agent_patch_size": 1681,
+    "duration_seconds": 241.66,
+    "error": null
+   },
+   {
+    "instance_id": "fastapi_14794",
+    "resolved": true,
+    "tool_calls": 17,
+    "agent_patch_size": 791,
+    "duration_seconds": 342.42,
+    "error": null
+   },
+   {
+    "instance_id": "fastapi_14492",
+    "resolved": true,
+    "tool_calls": 15,
+    "agent_patch_size": 391,
+    "duration_seconds": 70.68,
+    "error": null
+   },
+   {
+    "instance_id": "fastapi_14487",
+    "resolved": false,
+    "tool_calls": 24,
+    "agent_patch_size": 4894,
+    "duration_seconds": 367.24,
+    "error": null
+   },
+   {
+    "instance_id": "fastapi_5077",
+    "resolved": true,
+    "tool_calls": 28,
+    "agent_patch_size": 1203,
+    "duration_seconds": 328.67,
+    "error": null
+   },
+   {
+    "instance_id": "fastapi_13207",
+    "resolved": false,
+    "tool_calls": 27,
+    "agent_patch_size": 1280,
+    "duration_seconds": 206.76,
+    "error": null
+   },
+   {
+    "instance_id": "fastapi_14266",
+    "resolved": false,
+    "tool_calls": 28,
+    "agent_patch_size": 0,
+    "duration_seconds": 339.47,
+    "error": null
+   },
+   {
+    "instance_id": "fastapi_9425",
+    "resolved": true,
+    "tool_calls": 22,
+    "agent_patch_size": 588,
+    "duration_seconds": 187.95,
+    "error": null
+   },
+   {
+    "instance_id": "rich_3905",
+    "resolved": true,
+    "tool_calls": 15,
+    "agent_patch_size": 627,
+    "duration_seconds": 190.25,
+    "error": null
+   },
+   {
+    "instance_id": "fastapi_14303",
+    "resolved": false,
+    "tool_calls": 17,
+    "agent_patch_size": 745,
+    "duration_seconds": 154.3,
+    "error": null
+   },
+   {
+    "instance_id": "requests_6757",
+    "resolved": false,
+    "tool_calls": 27,
+    "agent_patch_size": 0,
+    "duration_seconds": 432.28,
+    "error": null
+   },
+   {
+    "instance_id": "requests_6629",
+    "resolved": false,
+    "tool_calls": 28,
+    "agent_patch_size": 524,
+    "duration_seconds": 367.46,
+    "error": null
+   },
+   {
+    "instance_id": "rich_3180",
+    "resolved": false,
+    "tool_calls": 24,
+    "agent_patch_size": 1798,
+    "duration_seconds": 486.41,
+    "error": "Agent exceeded session timeout (8.0 min)"
+   },
+   {
+    "instance_id": "rich_3472",
+    "resolved": false,
+    "tool_calls": 28,
+    "agent_patch_size": 0,
+    "duration_seconds": 263.27,
+    "error": "Agent exceeded tool call budget (28 calls)"
+   },
+   {
+    "instance_id": "rich_3471",
+    "resolved": false,
+    "tool_calls": 28,
+    "agent_patch_size": 1167,
+    "duration_seconds": 487.05,
+    "error": "Agent exceeded session timeout (8.0 min)"
+   },
+   {
+    "instance_id": "rich_2943",
+    "resolved": true,
+    "tool_calls": 26,
+    "agent_patch_size": 400,
+    "duration_seconds": 139.31,
+    "error": null
+   },
+   {
+    "instance_id": "rich_3063",
+    "resolved": false,
+    "tool_calls": 22,
+    "agent_patch_size": 492,
+    "duration_seconds": 486.07,
+    "error": "Agent exceeded session timeout (8.0 min)"
+   }
+  ]
+ },
+ {
+  "environment": "old",
+  "run": "v1.7 + R9 alpha 32",
+  "solved": 2,
+  "tasks": 20,
+  "per_task": [
+   {
+    "instance_id": "fastapi_15661",
+    "resolved": false,
+    "tool_calls": 8,
+    "agent_patch_size": 5279,
+    "duration_seconds": 430.46,
+    "error": null
+   },
+   {
+    "instance_id": "rich_4070",
+    "resolved": false,
+    "tool_calls": 3,
+    "agent_patch_size": 0,
+    "duration_seconds": 68.11,
+    "error": "Agent completed execution without calling submit_patch."
+   },
+   {
+    "instance_id": "rich_4077",
+    "resolved": false,
+    "tool_calls": 26,
+    "agent_patch_size": 0,
+    "duration_seconds": 430.19,
+    "error": null
+   },
+   {
+    "instance_id": "fastapi_14873",
+    "resolved": false,
+    "tool_calls": 27,
+    "agent_patch_size": 0,
+    "duration_seconds": 236.36,
+    "error": null
+   },
+   {
+    "instance_id": "fastapi_14794",
+    "resolved": true,
+    "tool_calls": 25,
+    "agent_patch_size": 1061,
+    "duration_seconds": 193.93,
+    "error": null
+   },
+   {
+    "instance_id": "fastapi_14492",
+    "resolved": false,
+    "tool_calls": 2,
+    "agent_patch_size": 0,
+    "duration_seconds": 31.45,
+    "error": "Agent completed execution without calling submit_patch."
+   },
+   {
+    "instance_id": "fastapi_14487",
+    "resolved": false,
+    "tool_calls": 27,
+    "agent_patch_size": 0,
+    "duration_seconds": 131.36,
+    "error": null
+   },
+   {
+    "instance_id": "fastapi_5077",
+    "resolved": false,
+    "tool_calls": 27,
+    "agent_patch_size": 0,
+    "duration_seconds": 290.31,
+    "error": null
+   },
+   {
+    "instance_id": "fastapi_13207",
+    "resolved": false,
+    "tool_calls": 17,
+    "agent_patch_size": 0,
+    "duration_seconds": 160.32,
+    "error": "Agent completed execution without calling submit_patch."
+   },
+   {
+    "instance_id": "fastapi_14266",
+    "resolved": false,
+    "tool_calls": 28,
+    "agent_patch_size": 0,
+    "duration_seconds": 480.65,
+    "error": "Agent exceeded tool call budget (28 calls)"
+   },
+   {
+    "instance_id": "fastapi_9425",
+    "resolved": false,
+    "tool_calls": 3,
+    "agent_patch_size": 0,
+    "duration_seconds": 36.88,
+    "error": null
+   },
+   {
+    "instance_id": "rich_3905",
+    "resolved": true,
+    "tool_calls": 6,
+    "agent_patch_size": 627,
+    "duration_seconds": 485.0,
+    "error": null
+   },
+   {
+    "instance_id": "fastapi_14303",
+    "resolved": false,
+    "tool_calls": 25,
+    "agent_patch_size": 0,
+    "duration_seconds": 185.49,
+    "error": null
+   },
+   {
+    "instance_id": "requests_6757",
+    "resolved": false,
+    "tool_calls": 21,
+    "agent_patch_size": 0,
+    "duration_seconds": 214.14,
+    "error": null
+   },
+   {
+    "instance_id": "requests_6629",
+    "resolved": false,
+    "tool_calls": 7,
+    "agent_patch_size": 676,
+    "duration_seconds": 548.07,
+    "error": "Agent exceeded session timeout (8.0 min)"
+   },
+   {
+    "instance_id": "rich_3180",
+    "resolved": false,
+    "tool_calls": 27,
+    "agent_patch_size": 0,
+    "duration_seconds": 185.38,
+    "error": null
+   },
+   {
+    "instance_id": "rich_3472",
+    "resolved": false,
+    "tool_calls": 5,
+    "agent_patch_size": 0,
+    "duration_seconds": 282.46,
+    "error": "Agent completed execution without calling submit_patch."
+   },
+   {
+    "instance_id": "rich_3471",
+    "resolved": false,
+    "tool_calls": 27,
+    "agent_patch_size": 0,
+    "duration_seconds": 137.2,
+    "error": null
+   },
+   {
+    "instance_id": "rich_2943",
+    "resolved": false,
+    "tool_calls": 8,
+    "agent_patch_size": 0,
+    "duration_seconds": 204.62,
+    "error": null
+   },
+   {
+    "instance_id": "rich_3063",
+    "resolved": false,
+    "tool_calls": 24,
+    "agent_patch_size": 0,
+    "duration_seconds": 277.22,
+    "error": null
+   }
+  ]
+ },
+ {
+  "environment": "old",
+  "run": "v1.7 + R9 alpha 8",
+  "solved": 8,
+  "tasks": 20,
+  "per_task": [
+   {
+    "instance_id": "fastapi_15661",
+    "resolved": false,
+    "tool_calls": 19,
+    "agent_patch_size": 2883,
+    "duration_seconds": 305.89,
+    "error": null
+   },
+   {
+    "instance_id": "rich_4070",
+    "resolved": false,
+    "tool_calls": 28,
+    "agent_patch_size": 2359,
+    "duration_seconds": 351.49,
+    "error": null
+   },
+   {
+    "instance_id": "rich_4077",
+    "resolved": true,
+    "tool_calls": 14,
+    "agent_patch_size": 351,
+    "duration_seconds": 116.34,
+    "error": null
+   },
+   {
+    "instance_id": "fastapi_14873",
+    "resolved": true,
+    "tool_calls": 21,
+    "agent_patch_size": 1679,
+    "duration_seconds": 457.83,
+    "error": null
+   },
+   {
+    "instance_id": "fastapi_14794",
+    "resolved": true,
+    "tool_calls": 17,
+    "agent_patch_size": 791,
+    "duration_seconds": 210.93,
+    "error": null
+   },
+   {
+    "instance_id": "fastapi_14492",
+    "resolved": true,
+    "tool_calls": 5,
+    "agent_patch_size": 391,
+    "duration_seconds": 31.61,
+    "error": null
+   },
+   {
+    "instance_id": "fastapi_14487",
+    "resolved": false,
+    "tool_calls": 27,
+    "agent_patch_size": 4414,
+    "duration_seconds": 488.86,
+    "error": "Agent exceeded session timeout (8.0 min)"
+   },
+   {
+    "instance_id": "fastapi_5077",
+    "resolved": true,
+    "tool_calls": 25,
+    "agent_patch_size": 887,
+    "duration_seconds": 360.62,
+    "error": null
+   },
+   {
+    "instance_id": "fastapi_13207",
+    "resolved": false,
+    "tool_calls": 21,
+    "agent_patch_size": 1280,
+    "duration_seconds": 470.68,
+    "error": null
+   },
+   {
+    "instance_id": "fastapi_14266",
+    "resolved": false,
+    "tool_calls": 28,
+    "agent_patch_size": 1673,
+    "duration_seconds": 277.29,
+    "error": null
+   },
+   {
+    "instance_id": "fastapi_9425",
+    "resolved": true,
+    "tool_calls": 28,
+    "agent_patch_size": 494,
+    "duration_seconds": 204.26,
+    "error": null
+   },
+   {
+    "instance_id": "rich_3905",
+    "resolved": true,
+    "tool_calls": 18,
+    "agent_patch_size": 627,
+    "duration_seconds": 119.27,
+    "error": null
+   },
+   {
+    "instance_id": "fastapi_14303",
+    "resolved": false,
+    "tool_calls": 22,
+    "agent_patch_size": 745,
+    "duration_seconds": 180.04,
+    "error": null
+   },
+   {
+    "instance_id": "requests_6757",
+    "resolved": false,
+    "tool_calls": 24,
+    "agent_patch_size": 0,
+    "duration_seconds": 244.21,
+    "error": null
+   },
+   {
+    "instance_id": "requests_6629",
+    "resolved": false,
+    "tool_calls": 25,
+    "agent_patch_size": 524,
+    "duration_seconds": 307.76,
+    "error": null
+   },
+   {
+    "instance_id": "rich_3180",
+    "resolved": false,
+    "tool_calls": 11,
+    "agent_patch_size": 634,
+    "duration_seconds": 485.95,
+    "error": "Agent exceeded session timeout (8.0 min)"
+   },
+   {
+    "instance_id": "rich_3472",
+    "resolved": false,
+    "tool_calls": 28,
+    "agent_patch_size": 0,
+    "duration_seconds": 287.17,
+    "error": null
+   },
+   {
+    "instance_id": "rich_3471",
+    "resolved": false,
+    "tool_calls": 10,
+    "agent_patch_size": 394,
+    "duration_seconds": 276.38,
+    "error": null
+   },
+   {
+    "instance_id": "rich_2943",
+    "resolved": true,
+    "tool_calls": 21,
+    "agent_patch_size": 400,
+    "duration_seconds": 111.87,
+    "error": null
+   },
+   {
+    "instance_id": "rich_3063",
+    "resolved": false,
+    "tool_calls": 28,
+    "agent_patch_size": 0,
+    "duration_seconds": 483.22,
+    "error": "Agent exceeded session timeout (8.0 min)"
+   }
+  ]
+ },
+ {
+  "environment": "old",
+  "run": "v1.6 + zero adapter",
+  "solved": 6,
+  "tasks": 20,
+  "per_task": [
+   {
+    "instance_id": "fastapi_15661",
+    "resolved": false,
+    "tool_calls": 19,
+    "agent_patch_size": 0,
+    "duration_seconds": 215.01,
+    "error": "Agent exceeded session timeout (3.5 min)"
+   },
+   {
+    "instance_id": "rich_4070",
+    "resolved": false,
+    "tool_calls": 23,
+    "agent_patch_size": 2146,
+    "duration_seconds": 214.06,
+    "error": "Agent exceeded session timeout (3.5 min)"
+   },
+   {
+    "instance_id": "rich_4077",
+    "resolved": true,
+    "tool_calls": 9,
+    "agent_patch_size": 324,
+    "duration_seconds": 53.08,
+    "error": null
+   },
+   {
+    "instance_id": "fastapi_14873",
+    "resolved": false,
+    "tool_calls": 31,
+    "agent_patch_size": 0,
+    "duration_seconds": 215.05,
+    "error": "Agent exceeded session timeout (3.5 min)"
+   },
+   {
+    "instance_id": "fastapi_14794",
+    "resolved": true,
+    "tool_calls": 16,
+    "agent_patch_size": 791,
+    "duration_seconds": 171.46,
+    "error": null
+   },
+   {
+    "instance_id": "fastapi_14492",
+    "resolved": true,
+    "tool_calls": 8,
+    "agent_patch_size": 391,
+    "duration_seconds": 36.54,
+    "error": null
+   },
+   {
+    "instance_id": "fastapi_14487",
+    "resolved": false,
+    "tool_calls": 25,
+    "agent_patch_size": 0,
+    "duration_seconds": 214.19,
+    "error": "Agent exceeded session timeout (3.5 min)"
+   },
+   {
+    "instance_id": "fastapi_5077",
+    "resolved": true,
+    "tool_calls": 15,
+    "agent_patch_size": 1143,
+    "duration_seconds": 217.28,
+    "error": null
+   },
+   {
+    "instance_id": "fastapi_13207",
+    "resolved": false,
+    "tool_calls": 25,
+    "agent_patch_size": 0,
+    "duration_seconds": 214.24,
+    "error": "Agent exceeded session timeout (3.5 min)"
+   },
+   {
+    "instance_id": "fastapi_14266",
+    "resolved": false,
+    "tool_calls": 38,
+    "agent_patch_size": 0,
+    "duration_seconds": 213.99,
+    "error": "Agent exceeded session timeout (3.5 min)"
+   },
+   {
+    "instance_id": "fastapi_9425",
+    "resolved": false,
+    "tool_calls": 24,
+    "agent_patch_size": 0,
+    "duration_seconds": 214.01,
+    "error": "Agent exceeded session timeout (3.5 min)"
+   },
+   {
+    "instance_id": "rich_3905",
+    "resolved": true,
+    "tool_calls": 13,
+    "agent_patch_size": 627,
+    "duration_seconds": 88.29,
+    "error": null
+   },
+   {
+    "instance_id": "fastapi_14303",
+    "resolved": false,
+    "tool_calls": 22,
+    "agent_patch_size": 745,
+    "duration_seconds": 147.16,
+    "error": null
+   },
+   {
+    "instance_id": "requests_6757",
+    "resolved": false,
+    "tool_calls": 14,
+    "agent_patch_size": 386,
+    "duration_seconds": 285.74,
+    "error": "Agent exceeded session timeout (3.5 min)"
+   },
+   {
+    "instance_id": "requests_6629",
+    "resolved": false,
+    "tool_calls": 31,
+    "agent_patch_size": 511,
+    "duration_seconds": 252.79,
+    "error": null
+   },
+   {
+    "instance_id": "rich_3180",
+    "resolved": false,
+    "tool_calls": 8,
+    "agent_patch_size": 0,
+    "duration_seconds": 212.7,
+    "error": "Agent exceeded session timeout (3.5 min)"
+   },
+   {
+    "instance_id": "rich_3472",
+    "resolved": false,
+    "tool_calls": 32,
+    "agent_patch_size": 0,
+    "duration_seconds": 212.56,
+    "error": "Agent exceeded session timeout (3.5 min)"
+   },
+   {
+    "instance_id": "rich_3471",
+    "resolved": false,
+    "tool_calls": 20,
+    "agent_patch_size": 0,
+    "duration_seconds": 212.57,
+    "error": "Agent exceeded session timeout (3.5 min)"
+   },
+   {
+    "instance_id": "rich_2943",
+    "resolved": true,
+    "tool_calls": 19,
+    "agent_patch_size": 400,
+    "duration_seconds": 104.09,
+    "error": null
+   },
+   {
+    "instance_id": "rich_3063",
+    "resolved": false,
+    "tool_calls": 23,
+    "agent_patch_size": 0,
+    "duration_seconds": 212.42,
+    "error": "Agent exceeded session timeout (3.5 min)"
+   }
+  ]
+ },
+ {
+  "environment": "old",
+  "run": "v1.6 + R9 alpha 32",
+  "solved": 0,
+  "tasks": 20,
+  "per_task": [
+   {
+    "instance_id": "fastapi_15661",
+    "resolved": false,
+    "tool_calls": 2,
+    "agent_patch_size": 0,
+    "duration_seconds": 216.52,
+    "error": "Agent exceeded session timeout (3.5 min)"
+   },
+   {
+    "instance_id": "rich_4070",
+    "resolved": false,
+    "tool_calls": 17,
+    "agent_patch_size": 0,
+    "duration_seconds": 203.37,
+    "error": null
+   },
+   {
+    "instance_id": "rich_4077",
+    "resolved": false,
+    "tool_calls": 17,
+    "agent_patch_size": 0,
+    "duration_seconds": 213.36,
+    "error": "Agent exceeded session timeout (3.5 min)"
+   },
+   {
+    "instance_id": "fastapi_14873",
+    "resolved": false,
+    "tool_calls": 20,
+    "agent_patch_size": 0,
+    "duration_seconds": 216.76,
+    "error": "Agent exceeded session timeout (3.5 min)"
+   },
+   {
+    "instance_id": "fastapi_14794",
+    "resolved": false,
+    "tool_calls": 3,
+    "agent_patch_size": 0,
+    "duration_seconds": 216.73,
+    "error": "Agent exceeded session timeout (3.5 min)"
+   },
+   {
+    "instance_id": "fastapi_14492",
+    "resolved": false,
+    "tool_calls": 2,
+    "agent_patch_size": 0,
+    "duration_seconds": 22.64,
+    "error": null
+   },
+   {
+    "instance_id": "fastapi_14487",
+    "resolved": false,
+    "tool_calls": 2,
+    "agent_patch_size": 0,
+    "duration_seconds": 23.68,
+    "error": null
+   },
+   {
+    "instance_id": "fastapi_5077",
+    "resolved": false,
+    "tool_calls": 16,
+    "agent_patch_size": 0,
+    "duration_seconds": 215.36,
+    "error": "Agent exceeded session timeout (3.5 min)"
+   },
+   {
+    "instance_id": "fastapi_13207",
+    "resolved": false,
+    "tool_calls": 19,
+    "agent_patch_size": 0,
+    "duration_seconds": 175.17,
+    "error": "Agent completed execution without calling submit_patch."
+   },
+   {
+    "instance_id": "fastapi_14266",
+    "resolved": false,
+    "tool_calls": 29,
+    "agent_patch_size": 0,
+    "duration_seconds": 178.32,
+    "error": "Agent completed execution without calling submit_patch."
+   },
+   {
+    "instance_id": "fastapi_9425",
+    "resolved": false,
+    "tool_calls": 34,
+    "agent_patch_size": 0,
+    "duration_seconds": 216.09,
+    "error": "Agent exceeded session timeout (3.5 min)"
+   },
+   {
+    "instance_id": "rich_3905",
+    "resolved": false,
+    "tool_calls": 16,
+    "agent_patch_size": 0,
+    "duration_seconds": 147.43,
+    "error": null
+   },
+   {
+    "instance_id": "fastapi_14303",
+    "resolved": false,
+    "tool_calls": 4,
+    "agent_patch_size": 0,
+    "duration_seconds": 175.34,
+    "error": null
+   },
+   {
+    "instance_id": "requests_6757",
+    "resolved": false,
+    "tool_calls": 3,
+    "agent_patch_size": 0,
+    "duration_seconds": 211.85,
+    "error": "Agent exceeded session timeout (3.5 min)"
+   },
+   {
+    "instance_id": "requests_6629",
+    "resolved": false,
+    "tool_calls": 7,
+    "agent_patch_size": 0,
+    "duration_seconds": 211.19,
+    "error": "Agent exceeded session timeout (3.5 min)"
+   },
+   {
+    "instance_id": "rich_3180",
+    "resolved": false,
+    "tool_calls": 20,
+    "agent_patch_size": 0,
+    "duration_seconds": 212.29,
+    "error": "Agent exceeded session timeout (3.5 min)"
+   },
+   {
+    "instance_id": "rich_3472",
+    "resolved": false,
+    "tool_calls": 41,
+    "agent_patch_size": 0,
+    "duration_seconds": 212.24,
+    "error": "Agent exceeded session timeout (3.5 min)"
+   },
+   {
+    "instance_id": "rich_3471",
+    "resolved": false,
+    "tool_calls": 32,
+    "agent_patch_size": 0,
+    "duration_seconds": 212.28,
+    "error": "Agent exceeded session timeout (3.5 min)"
+   },
+   {
+    "instance_id": "rich_2943",
+    "resolved": false,
+    "tool_calls": 31,
+    "agent_patch_size": 0,
+    "duration_seconds": 139.83,
+    "error": null
+   },
+   {
+    "instance_id": "rich_3063",
+    "resolved": false,
+    "tool_calls": 3,
+    "agent_patch_size": 0,
+    "duration_seconds": 212.79,
+    "error": "Agent exceeded session timeout (3.5 min)"
+   }
+  ]
+ },
+ {
+  "environment": "fixed",
+  "run": "v1.7 + zero adapter",
+  "solved": 9,
+  "tasks": 20,
+  "per_task": [
+   {
+    "instance_id": "fastapi_15661",
+    "resolved": false,
+    "tool_calls": 23,
+    "agent_patch_size": 2043,
+    "duration_seconds": 431.26,
+    "error": null
+   },
+   {
+    "instance_id": "rich_4070",
+    "resolved": false,
+    "tool_calls": 28,
+    "agent_patch_size": 4952,
+    "duration_seconds": 269.12,
+    "error": null
+   },
+   {
+    "instance_id": "rich_4077",
+    "resolved": true,
+    "tool_calls": 21,
+    "agent_patch_size": 353,
+    "duration_seconds": 257.8,
+    "error": null
+   },
+   {
+    "instance_id": "fastapi_14873",
+    "resolved": true,
+    "tool_calls": 28,
+    "agent_patch_size": 2331,
+    "duration_seconds": 380.36,
+    "error": null
+   },
+   {
+    "instance_id": "fastapi_14794",
+    "resolved": true,
+    "tool_calls": 12,
+    "agent_patch_size": 791,
+    "duration_seconds": 202.83,
+    "error": null
+   },
+   {
+    "instance_id": "fastapi_14492",
+    "resolved": true,
+    "tool_calls": 15,
+    "agent_patch_size": 391,
+    "duration_seconds": 63.87,
+    "error": null
+   },
+   {
+    "instance_id": "fastapi_14487",
+    "resolved": false,
+    "tool_calls": 26,
+    "agent_patch_size": 5616,
+    "duration_seconds": 349.67,
+    "error": null
+   },
+   {
+    "instance_id": "fastapi_5077",
+    "resolved": true,
+    "tool_calls": 26,
+    "agent_patch_size": 1151,
+    "duration_seconds": 336.68,
+    "error": null
+   },
+   {
+    "instance_id": "fastapi_13207",
+    "resolved": false,
+    "tool_calls": 28,
+    "agent_patch_size": 0,
+    "duration_seconds": 449.96,
+    "error": null
+   },
+   {
+    "instance_id": "fastapi_14266",
+    "resolved": false,
+    "tool_calls": 28,
+    "agent_patch_size": 1111,
+    "duration_seconds": 370.76,
+    "error": null
+   },
+   {
+    "instance_id": "fastapi_9425",
+    "resolved": true,
+    "tool_calls": 25,
+    "agent_patch_size": 544,
+    "duration_seconds": 210.89,
+    "error": null
+   },
+   {
+    "instance_id": "rich_3905",
+    "resolved": true,
+    "tool_calls": 10,
+    "agent_patch_size": 627,
+    "duration_seconds": 86.76,
+    "error": null
+   },
+   {
+    "instance_id": "fastapi_14303",
+    "resolved": true,
+    "tool_calls": 23,
+    "agent_patch_size": 745,
+    "duration_seconds": 238.61,
+    "error": null
+   },
+   {
+    "instance_id": "requests_6757",
+    "resolved": false,
+    "tool_calls": 10,
+    "agent_patch_size": 0,
+    "duration_seconds": 241.05,
+    "error": null
+   },
+   {
+    "instance_id": "requests_6629",
+    "resolved": false,
+    "tool_calls": 15,
+    "agent_patch_size": 524,
+    "duration_seconds": 217.85,
+    "error": null
+   },
+   {
+    "instance_id": "rich_3180",
+    "resolved": false,
+    "tool_calls": 8,
+    "agent_patch_size": 0,
+    "duration_seconds": 483.22,
+    "error": "Agent exceeded session timeout (8.0 min)"
+   },
+   {
+    "instance_id": "rich_3472",
+    "resolved": false,
+    "tool_calls": 28,
+    "agent_patch_size": 0,
+    "duration_seconds": 446.55,
+    "error": null
+   },
+   {
+    "instance_id": "rich_3471",
+    "resolved": false,
+    "tool_calls": 23,
+    "agent_patch_size": 856,
+    "duration_seconds": 341.54,
+    "error": null
+   },
+   {
+    "instance_id": "rich_2943",
+    "resolved": true,
+    "tool_calls": 28,
+    "agent_patch_size": 400,
+    "duration_seconds": 240.76,
+    "error": null
+   },
+   {
+    "instance_id": "rich_3063",
+    "resolved": false,
+    "tool_calls": 16,
+    "agent_patch_size": 617,
+    "duration_seconds": 486.4,
+    "error": "Agent exceeded session timeout (8.0 min)"
+   }
+  ]
+ },
+ {
+  "environment": "fixed",
+  "run": "v1.7 + R9 alpha 32, run 1",
+  "solved": 2,
+  "tasks": 20,
+  "per_task": [
+   {
+    "instance_id": "fastapi_15661",
+    "resolved": false,
+    "tool_calls": 5,
+    "agent_patch_size": 0,
+    "duration_seconds": 72.63,
+    "error": "Agent completed execution without calling submit_patch."
+   },
+   {
+    "instance_id": "rich_4070",
+    "resolved": false,
+    "tool_calls": 20,
+    "agent_patch_size": 0,
+    "duration_seconds": 281.13,
+    "error": null
+   },
+   {
+    "instance_id": "rich_4077",
+    "resolved": false,
+    "tool_calls": 4,
+    "agent_patch_size": 0,
+    "duration_seconds": 31.06,
+    "error": null
+   },
+   {
+    "instance_id": "fastapi_14873",
+    "resolved": false,
+    "tool_calls": 9,
+    "agent_patch_size": 0,
+    "duration_seconds": 56.66,
+    "error": null
+   },
+   {
+    "instance_id": "fastapi_14794",
+    "resolved": false,
+    "tool_calls": 3,
+    "agent_patch_size": 0,
+    "duration_seconds": 28.47,
+    "error": "Agent completed execution without calling submit_patch."
+   },
+   {
+    "instance_id": "fastapi_14492",
+    "resolved": false,
+    "tool_calls": 2,
+    "agent_patch_size": 0,
+    "duration_seconds": 21.01,
+    "error": null
+   },
+   {
+    "instance_id": "fastapi_14487",
+    "resolved": false,
+    "tool_calls": 21,
+    "agent_patch_size": 0,
+    "duration_seconds": 103.51,
+    "error": null
+   },
+   {
+    "instance_id": "fastapi_5077",
+    "resolved": false,
+    "tool_calls": 2,
+    "agent_patch_size": 0,
+    "duration_seconds": 27.38,
+    "error": null
+   },
+   {
+    "instance_id": "fastapi_13207",
+    "resolved": false,
+    "tool_calls": 26,
+    "agent_patch_size": 0,
+    "duration_seconds": 115.44,
+    "error": null
+   },
+   {
+    "instance_id": "fastapi_14266",
+    "resolved": false,
+    "tool_calls": 28,
+    "agent_patch_size": 0,
+    "duration_seconds": 388.18,
+    "error": "Agent exceeded tool call budget (28 calls)"
+   },
+   {
+    "instance_id": "fastapi_9425",
+    "resolved": false,
+    "tool_calls": 8,
+    "agent_patch_size": 0,
+    "duration_seconds": 484.44,
+    "error": "Agent exceeded session timeout (8.0 min)"
+   },
+   {
+    "instance_id": "rich_3905",
+    "resolved": true,
+    "tool_calls": 24,
+    "agent_patch_size": 627,
+    "duration_seconds": 120.44,
+    "error": null
+   },
+   {
+    "instance_id": "fastapi_14303",
+    "resolved": true,
+    "tool_calls": 6,
+    "agent_patch_size": 745,
+    "duration_seconds": 47.33,
+    "error": null
+   },
+   {
+    "instance_id": "requests_6757",
+    "resolved": false,
+    "tool_calls": 4,
+    "agent_patch_size": 0,
+    "duration_seconds": 247.33,
+    "error": "Agent completed execution without calling submit_patch."
+   },
+   {
+    "instance_id": "requests_6629",
+    "resolved": false,
+    "tool_calls": 27,
+    "agent_patch_size": 0,
+    "duration_seconds": 281.76,
+    "error": null
+   },
+   {
+    "instance_id": "rich_3180",
+    "resolved": false,
+    "tool_calls": 4,
+    "agent_patch_size": 0,
+    "duration_seconds": 483.06,
+    "error": "Agent exceeded session timeout (8.0 min)"
+   },
+   {
+    "instance_id": "rich_3472",
+    "resolved": false,
+    "tool_calls": 27,
+    "agent_patch_size": 0,
+    "duration_seconds": 112.06,
+    "error": null
+   },
+   {
+    "instance_id": "rich_3471",
+    "resolved": false,
+    "tool_calls": 9,
+    "agent_patch_size": 0,
+    "duration_seconds": 483.02,
+    "error": "Agent exceeded session timeout (8.0 min)"
+   },
+   {
+    "instance_id": "rich_2943",
+    "resolved": false,
+    "tool_calls": 26,
+    "agent_patch_size": 0,
+    "duration_seconds": 128.36,
+    "error": null
+   },
+   {
+    "instance_id": "rich_3063",
+    "resolved": false,
+    "tool_calls": 17,
+    "agent_patch_size": 0,
+    "duration_seconds": 117.57,
+    "error": null
+   }
+  ]
+ },
+ {
+  "environment": "fixed",
+  "run": "v1.7 + R9 alpha 32, run 2",
+  "solved": 0,
+  "tasks": 20,
+  "per_task": [
+   {
+    "instance_id": "fastapi_15661",
+    "resolved": false,
+    "tool_calls": 4,
+    "agent_patch_size": 0,
+    "duration_seconds": 485.25,
+    "error": "Agent exceeded session timeout (8.0 min)"
+   },
+   {
+    "instance_id": "rich_4070",
+    "resolved": false,
+    "tool_calls": 27,
+    "agent_patch_size": 0,
+    "duration_seconds": 422.18,
+    "error": null
+   },
+   {
+    "instance_id": "rich_4077",
+    "resolved": false,
+    "tool_calls": 27,
+    "agent_patch_size": 0,
+    "duration_seconds": 167.21,
+    "error": null
+   },
+   {
+    "instance_id": "fastapi_14873",
+    "resolved": false,
+    "tool_calls": 28,
+    "agent_patch_size": 0,
+    "duration_seconds": 161.1,
+    "error": "Agent exceeded tool call budget (28 calls)"
+   },
+   {
+    "instance_id": "fastapi_14794",
+    "resolved": false,
+    "tool_calls": 5,
+    "agent_patch_size": 0,
+    "duration_seconds": 484.75,
+    "error": "Agent exceeded session timeout (8.0 min)"
+   },
+   {
+    "instance_id": "fastapi_14492",
+    "resolved": false,
+    "tool_calls": 5,
+    "agent_patch_size": 0,
+    "duration_seconds": 484.6,
+    "error": "Agent exceeded session timeout (8.0 min)"
+   },
+   {
+    "instance_id": "fastapi_14487",
+    "resolved": false,
+    "tool_calls": 27,
+    "agent_patch_size": 0,
+    "duration_seconds": 100.33,
+    "error": null
+   },
+   {
+    "instance_id": "fastapi_5077",
+    "resolved": false,
+    "tool_calls": 27,
+    "agent_patch_size": 0,
+    "duration_seconds": 305.06,
+    "error": "Agent completed execution without calling submit_patch."
+   },
+   {
+    "instance_id": "fastapi_13207",
+    "resolved": false,
+    "tool_calls": 7,
+    "agent_patch_size": 0,
+    "duration_seconds": 50.92,
+    "error": "Agent completed execution without calling submit_patch."
+   },
+   {
+    "instance_id": "fastapi_14266",
+    "resolved": false,
+    "tool_calls": 24,
+    "agent_patch_size": 0,
+    "duration_seconds": 170.1,
+    "error": null
+   },
+   {
+    "instance_id": "fastapi_9425",
+    "resolved": false,
+    "tool_calls": 27,
+    "agent_patch_size": 0,
+    "duration_seconds": 127.83,
+    "error": null
+   },
+   {
+    "instance_id": "rich_3905",
+    "resolved": false,
+    "tool_calls": 6,
+    "agent_patch_size": 0,
+    "duration_seconds": 35.38,
+    "error": null
+   },
+   {
+    "instance_id": "fastapi_14303",
+    "resolved": false,
+    "tool_calls": 27,
+    "agent_patch_size": 0,
+    "duration_seconds": 139.56,
+    "error": null
+   },
+   {
+    "instance_id": "requests_6757",
+    "resolved": false,
+    "tool_calls": 21,
+    "agent_patch_size": 0,
+    "duration_seconds": 127.8,
+    "error": null
+   },
+   {
+    "instance_id": "requests_6629",
+    "resolved": false,
+    "tool_calls": 17,
+    "agent_patch_size": 0,
+    "duration_seconds": 226.95,
+    "error": null
+   },
+   {
+    "instance_id": "rich_3180",
+    "resolved": false,
+    "tool_calls": 27,
+    "agent_patch_size": 0,
+    "duration_seconds": 286.17,
+    "error": null
+   },
+   {
+    "instance_id": "rich_3472",
+    "resolved": false,
+    "tool_calls": 17,
+    "agent_patch_size": 0,
+    "duration_seconds": 86.44,
+    "error": null
+   },
+   {
+    "instance_id": "rich_3471",
+    "resolved": false,
+    "tool_calls": 21,
+    "agent_patch_size": 0,
+    "duration_seconds": 483.1,
+    "error": "Agent exceeded session timeout (8.0 min)"
+   },
+   {
+    "instance_id": "rich_2943",
+    "resolved": false,
+    "tool_calls": 9,
+    "agent_patch_size": 0,
+    "duration_seconds": 483.03,
+    "error": "Agent exceeded session timeout (8.0 min)"
+   },
+   {
+    "instance_id": "rich_3063",
+    "resolved": false,
+    "tool_calls": 2,
+    "agent_patch_size": 0,
+    "duration_seconds": 483.09,
+    "error": "Agent exceeded session timeout (8.0 min)"
+   }
+  ]
+ },
+ {
+  "environment": "fixed",
+  "run": "v1.7 + R13 alpha 32, run 1",
+  "solved": 6,
+  "tasks": 20,
+  "per_task": [
+   {
+    "instance_id": "fastapi_15661",
+    "resolved": false,
+    "tool_calls": 20,
+    "agent_patch_size": 0,
+    "duration_seconds": 484.69,
+    "error": "Agent exceeded session timeout (8.0 min)"
+   },
+   {
+    "instance_id": "rich_4070",
+    "resolved": false,
+    "tool_calls": 17,
+    "agent_patch_size": 3579,
+    "duration_seconds": 488.88,
+    "error": "Agent exceeded session timeout (8.0 min)"
+   },
+   {
+    "instance_id": "rich_4077",
+    "resolved": false,
+    "tool_calls": 24,
+    "agent_patch_size": 1090,
+    "duration_seconds": 399.13,
+    "error": null
+   },
+   {
+    "instance_id": "fastapi_14873",
+    "resolved": true,
+    "tool_calls": 23,
+    "agent_patch_size": 1681,
+    "duration_seconds": 185.97,
+    "error": null
+   },
+   {
+    "instance_id": "fastapi_14794",
+    "resolved": false,
+    "tool_calls": 28,
+    "agent_patch_size": 713,
+    "duration_seconds": 362.66,
+    "error": null
+   },
+   {
+    "instance_id": "fastapi_14492",
+    "resolved": true,
+    "tool_calls": 8,
+    "agent_patch_size": 391,
+    "duration_seconds": 33.39,
+    "error": null
+   },
+   {
+    "instance_id": "fastapi_14487",
+    "resolved": false,
+    "tool_calls": 19,
+    "agent_patch_size": 0,
+    "duration_seconds": 483.3,
+    "error": "Agent exceeded session timeout (8.0 min)"
+   },
+   {
+    "instance_id": "fastapi_5077",
+    "resolved": true,
+    "tool_calls": 28,
+    "agent_patch_size": 887,
+    "duration_seconds": 488.25,
+    "error": null
+   },
+   {
+    "instance_id": "fastapi_13207",
+    "resolved": false,
+    "tool_calls": 28,
+    "agent_patch_size": 0,
+    "duration_seconds": 172.69,
+    "error": "Agent exceeded tool call budget (28 calls)"
+   },
+   {
+    "instance_id": "fastapi_14266",
+    "resolved": false,
+    "tool_calls": 25,
+    "agent_patch_size": 2513,
+    "duration_seconds": 488.47,
+    "error": "Agent exceeded session timeout (8.0 min)"
+   },
+   {
+    "instance_id": "fastapi_9425",
+    "resolved": false,
+    "tool_calls": 6,
+    "agent_patch_size": 0,
+    "duration_seconds": 483.06,
+    "error": "Agent exceeded session timeout (8.0 min)"
+   },
+   {
+    "instance_id": "rich_3905",
+    "resolved": true,
+    "tool_calls": 22,
+    "agent_patch_size": 627,
+    "duration_seconds": 254.41,
+    "error": null
+   },
+   {
+    "instance_id": "fastapi_14303",
+    "resolved": true,
+    "tool_calls": 14,
+    "agent_patch_size": 745,
+    "duration_seconds": 97.16,
+    "error": null
+   },
+   {
+    "instance_id": "requests_6757",
+    "resolved": false,
+    "tool_calls": 21,
+    "agent_patch_size": 0,
+    "duration_seconds": 436.66,
+    "error": null
+   },
+   {
+    "instance_id": "requests_6629",
+    "resolved": false,
+    "tool_calls": 10,
+    "agent_patch_size": 1042,
+    "duration_seconds": 342.02,
+    "error": null
+   },
+   {
+    "instance_id": "rich_3180",
+    "resolved": false,
+    "tool_calls": 9,
+    "agent_patch_size": 0,
+    "duration_seconds": 481.65,
+    "error": "Agent exceeded session timeout (8.0 min)"
+   },
+   {
+    "instance_id": "rich_3472",
+    "resolved": false,
+    "tool_calls": 7,
+    "agent_patch_size": 0,
+    "duration_seconds": 481.65,
+    "error": "Agent exceeded session timeout (8.0 min)"
+   },
+   {
+    "instance_id": "rich_3471",
+    "resolved": false,
+    "tool_calls": 19,
+    "agent_patch_size": 0,
+    "duration_seconds": 481.67,
+    "error": "Agent exceeded session timeout (8.0 min)"
+   },
+   {
+    "instance_id": "rich_2943",
+    "resolved": true,
+    "tool_calls": 28,
+    "agent_patch_size": 400,
+    "duration_seconds": 164.68,
+    "error": null
+   },
+   {
+    "instance_id": "rich_3063",
+    "resolved": false,
+    "tool_calls": 18,
+    "agent_patch_size": 0,
+    "duration_seconds": 481.61,
+    "error": "Agent exceeded session timeout (8.0 min)"
+   }
+  ]
+ },
+ {
+  "environment": "fixed",
+  "run": "v1.7 + R13 alpha 32, run 2",
+  "solved": 8,
+  "tasks": 20,
+  "per_task": [
+   {
+    "instance_id": "fastapi_15661",
+    "resolved": false,
+    "tool_calls": 10,
+    "agent_patch_size": 0,
+    "duration_seconds": 485.06,
+    "error": "Agent exceeded session timeout (8.0 min)"
+   },
+   {
+    "instance_id": "rich_4070",
+    "resolved": false,
+    "tool_calls": 10,
+    "agent_patch_size": 0,
+    "duration_seconds": 482.56,
+    "error": "Agent exceeded session timeout (8.0 min)"
+   },
+   {
+    "instance_id": "rich_4077",
+    "resolved": true,
+    "tool_calls": 18,
+    "agent_patch_size": 324,
+    "duration_seconds": 309.54,
+    "error": null
+   },
+   {
+    "instance_id": "fastapi_14873",
+    "resolved": true,
+    "tool_calls": 28,
+    "agent_patch_size": 1773,
+    "duration_seconds": 236.33,
+    "error": null
+   },
+   {
+    "instance_id": "fastapi_14794",
+    "resolved": true,
+    "tool_calls": 27,
+    "agent_patch_size": 1047,
+    "duration_seconds": 237.32,
+    "error": null
+   },
+   {
+    "instance_id": "fastapi_14492",
+    "resolved": true,
+    "tool_calls": 18,
+    "agent_patch_size": 391,
+    "duration_seconds": 73.98,
+    "error": null
+   },
+   {
+    "instance_id": "fastapi_14487",
+    "resolved": false,
+    "tool_calls": 21,
+    "agent_patch_size": 0,
+    "duration_seconds": 484.45,
+    "error": "Agent exceeded session timeout (8.0 min)"
+   },
+   {
+    "instance_id": "fastapi_5077",
+    "resolved": false,
+    "tool_calls": 28,
+    "agent_patch_size": 0,
+    "duration_seconds": 402.89,
+    "error": null
+   },
+   {
+    "instance_id": "fastapi_13207",
+    "resolved": true,
+    "tool_calls": 28,
+    "agent_patch_size": 1218,
+    "duration_seconds": 243.47,
+    "error": null
+   },
+   {
+    "instance_id": "fastapi_14266",
+    "resolved": false,
+    "tool_calls": 28,
+    "agent_patch_size": 0,
+    "duration_seconds": 483.99,
+    "error": "Agent exceeded session timeout (8.0 min)"
+   },
+   {
+    "instance_id": "fastapi_9425",
+    "resolved": true,
+    "tool_calls": 24,
+    "agent_patch_size": 494,
+    "duration_seconds": 309.0,
+    "error": null
+   },
+   {
+    "instance_id": "rich_3905",
+    "resolved": true,
+    "tool_calls": 18,
+    "agent_patch_size": 627,
+    "duration_seconds": 105.54,
+    "error": null
+   },
+   {
+    "instance_id": "fastapi_14303",
+    "resolved": true,
+    "tool_calls": 24,
+    "agent_patch_size": 851,
+    "duration_seconds": 261.18,
+    "error": null
+   },
+   {
+    "instance_id": "requests_6757",
+    "resolved": false,
+    "tool_calls": 24,
+    "agent_patch_size": 0,
+    "duration_seconds": 481.22,
+    "error": "Agent exceeded session timeout (8.0 min)"
+   },
+   {
+    "instance_id": "requests_6629",
+    "resolved": false,
+    "tool_calls": 14,
+    "agent_patch_size": 717,
+    "duration_seconds": 580.85,
+    "error": "Agent exceeded session timeout (8.0 min)"
+   },
+   {
+    "instance_id": "rich_3180",
+    "resolved": false,
+    "tool_calls": 8,
+    "agent_patch_size": 0,
+    "duration_seconds": 482.55,
+    "error": "Agent exceeded session timeout (8.0 min)"
+   },
+   {
+    "instance_id": "rich_3472",
+    "resolved": false,
+    "tool_calls": 13,
+    "agent_patch_size": 0,
+    "duration_seconds": 482.35,
+    "error": "Agent exceeded session timeout (8.0 min)"
+   },
+   {
+    "instance_id": "rich_3471",
+    "resolved": false,
+    "tool_calls": 22,
+    "agent_patch_size": 438,
+    "duration_seconds": 435.01,
+    "error": null
+   },
+   {
+    "instance_id": "rich_2943",
+    "resolved": false,
+    "tool_calls": 8,
+    "agent_patch_size": 0,
+    "duration_seconds": 482.16,
+    "error": "Agent exceeded session timeout (8.0 min)"
+   },
+   {
+    "instance_id": "rich_3063",
+    "resolved": false,
+    "tool_calls": 3,
+    "agent_patch_size": 0,
+    "duration_seconds": 482.19,
+    "error": "Agent exceeded session timeout (8.0 min)"
+   }
+  ]
+ }
+]

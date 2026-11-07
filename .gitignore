@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+dl_pkgs/
+dl_src/
+dl_gemma4/
+dl_qwen3/

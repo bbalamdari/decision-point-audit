@@ -1,0 +1,165 @@
+
+=== Axolotl gemma4 hub default final_thought=False
+  pos  166 next=['<|channel>', 'thought', '\n'] supervised=[True, True, True] first_supervised_offset=0
+  <|"|>Replace text in a file.<|"|>,parameters:{properties:{new:{description:<|"|>new text<|"|>,type:<|"|>STRING<|"|>},old:{description:<|"|>old text<|"|>,type:<|"|>STRING<|"|>},path:{description:<|"|>file<|"|>,type:<|"|>STRING<|"|>}},required:[<|"|>path<|"|>,<|"|>old<|"|>,<|"|>new<|"|>],type:<|"|>OBJECT<|"|>}}<tool|><turn|>\n<|turn>user\nFix the failing test in calc.py.<turn|>\n<|turn>model\n[[<|channel>thought\nI should run the tests first.\n<channel|><|channel>thought\nadd() uses a+b+1; remove the +1.\n<channel|>Fixed the issue: add() now returns a+b.<turn|>]]\n
+
+=== Axolotl gemma4 hub reasoning_false final_thought=False
+  pos  166 next=['<|channel>', 'thought', '\n'] supervised=[False, False, False] first_supervised_offset=31
+  <|"|>Replace text in a file.<|"|>,parameters:{properties:{new:{description:<|"|>new text<|"|>,type:<|"|>STRING<|"|>},old:{description:<|"|>old text<|"|>,type:<|"|>STRING<|"|>},path:{description:<|"|>file<|"|>,type:<|"|>STRING<|"|>}},required:[<|"|>path<|"|>,<|"|>old<|"|>,<|"|>new<|"|>],type:<|"|>OBJECT<|"|>}}<tool|><turn|>\n<|turn>user\nFix the failing test in calc.py.<turn|>\n<|turn>model\n<|channel>thought\nI should run the tests first.\n<channel|><|channel>thought\nadd() uses a+b+1; remove the +1.\n<channel|>[[Fixed the issue: add() now returns a+b.<turn|>]]\n
+
+=== Axolotl gemma4 hub reasoning_false_content_true final_thought=False
+  pos  166 next=['<|channel>', 'thought', '\n'] supervised=[False, False, False] first_supervised_offset=31
+  <|"|>Replace text in a file.<|"|>,parameters:{properties:{new:{description:<|"|>new text<|"|>,type:<|"|>STRING<|"|>},old:{description:<|"|>old text<|"|>,type:<|"|>STRING<|"|>},path:{description:<|"|>file<|"|>,type:<|"|>STRING<|"|>}},required:[<|"|>path<|"|>,<|"|>old<|"|>,<|"|>new<|"|>],type:<|"|>OBJECT<|"|>}}<tool|><turn|>\n<|turn>user\nFix the failing test in calc.py.<turn|>\n<|turn>model\n<|channel>thought\nI should run the tests first.\n<channel|><|channel>thought\nadd() uses a+b+1; remove the +1.\n<channel|>[[Fixed the issue: add() now returns a+b.<turn|>]]\n
+
+=== Axolotl gemma4 hub default final_thought=True
+  pos  166 next=['<|channel>', 'thought', '\n'] supervised=[True, True, True] first_supervised_offset=0
+
+=== Axolotl gemma4 hub reasoning_false final_thought=True
+  pos  166 next=['<|channel>', 'thought', '\n'] supervised=[False, False, False] first_supervised_offset=55
+
+=== Axolotl gemma4 hub reasoning_false_content_true final_thought=True
+  pos  166 next=['<|channel>', 'thought', '\n'] supervised=[False, False, False] first_supervised_offset=43
+
+=== Axolotl qwen3 hub default final_thought=False
+  pos  265 next=['<think>', 'Ċ', 'I'] supervised=[True, True, True] first_supervised_offset=0
+  pos  322 next=['<think>', 'Ċ', 'add'] supervised=[True, True, True] first_supervised_offset=0
+  pos  390 next=['<think>', 'ĊĊ', '</think>'] supervised=[False, False, False] first_supervised_offset=4
+  /think>\n\n<tool_call>\n{"name": "run_command", "arguments": {"command": "pytest -q"}}\n</tool_call><|im_end|>]]\n<|im_start|>user\n<tool_response>\nFAILED test_add: expected 3, got 4\n</tool_response><|im_end|>\n<|im_start|>assistant\n[[<think>\nadd() uses a+b+1; remove the +1.\n</think>\n\n<tool_call>\n{"name": "edit_file", "arguments": {"path": "calc.py", "old": "a+b+1", "new": "a+b"}}\n</tool_call><|im_end|>]]\n<|im_start|>user\n<tool_response>\nok\n</tool_response><|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n[[Fixed the issue: add() now returns a+b.<|im_end|>]]\n
+
+=== Axolotl qwen3 hub reasoning_false final_thought=False
+  pos  265 next=['<think>', 'Ċ', 'I'] supervised=[False, False, False] first_supervised_offset=32
+  pos  322 next=['<think>', 'Ċ', 'add'] supervised=[False, False, False] first_supervised_offset=53
+  pos  390 next=['<think>', 'ĊĊ', '</think>'] supervised=[False, False, False] first_supervised_offset=4
+  hink>\n\n<tool_call>\n{"name": "run_command", "arguments": {"command": "pytest -q"}}\n</tool_call>[[<|im_end|>]]\n<|im_start|>user\n<tool_response>\nFAILED test_add: expected 3, got 4\n</tool_response><|im_end|>\n<|im_start|>assistant\n<think>\nadd() uses a+b+1; remove the +1.\n</think>\n\n<tool_call>\n{"name": "edit_file", "arguments": {"path": "calc.py", "old": "a+b+1", "new": "a+b"}}\n</tool_call>[[<|im_end|>]]\n<|im_start|>user\n<tool_response>\nok\n</tool_response><|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n[[Fixed the issue: add() now returns a+b.<|im_end|>]]\n
+
+=== Axolotl qwen3 hub reasoning_false_content_true final_thought=False
+  pos  265 next=['<think>', 'Ċ', 'I'] supervised=[False, False, False] first_supervised_offset=32
+  pos  322 next=['<think>', 'Ċ', 'add'] supervised=[False, False, False] first_supervised_offset=53
+  pos  390 next=['<think>', 'ĊĊ', '</think>'] supervised=[False, False, False] first_supervised_offset=4
+  hink>\n\n<tool_call>\n{"name": "run_command", "arguments": {"command": "pytest -q"}}\n</tool_call>[[<|im_end|>]]\n<|im_start|>user\n<tool_response>\nFAILED test_add: expected 3, got 4\n</tool_response><|im_end|>\n<|im_start|>assistant\n<think>\nadd() uses a+b+1; remove the +1.\n</think>\n\n<tool_call>\n{"name": "edit_file", "arguments": {"path": "calc.py", "old": "a+b+1", "new": "a+b"}}\n</tool_call>[[<|im_end|>]]\n<|im_start|>user\n<tool_response>\nok\n</tool_response><|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n[[Fixed the issue: add() now returns a+b.<|im_end|>]]\n
+
+=== Axolotl qwen3 hub default final_thought=True
+  pos  265 next=['<think>', 'Ċ', 'I'] supervised=[True, True, True] first_supervised_offset=0
+  pos  322 next=['<think>', 'Ċ', 'add'] supervised=[True, True, True] first_supervised_offset=0
+  pos  390 next=['<think>', 'Ċ', 'The'] supervised=[False, False, True] first_supervised_offset=2
+
+=== Axolotl qwen3 hub reasoning_false final_thought=True
+  pos  265 next=['<think>', 'Ċ', 'I'] supervised=[False, False, False] first_supervised_offset=32
+  pos  322 next=['<think>', 'Ċ', 'add'] supervised=[False, False, False] first_supervised_offset=53
+  pos  390 next=['<think>', 'Ċ', 'The'] supervised=[False, False, False] first_supervised_offset=22
+
+=== Axolotl qwen3 hub reasoning_false_content_true final_thought=True
+  pos  265 next=['<think>', 'Ċ', 'I'] supervised=[False, False, False] first_supervised_offset=32
+  pos  322 next=['<think>', 'Ċ', 'add'] supervised=[False, False, False] first_supervised_offset=53
+  pos  390 next=['<think>', 'Ċ', 'The'] supervised=[False, False, False] first_supervised_offset=11
+
+=== Axolotl gemma4 axolotl-bundled gemma4.jinja default final_thought=False: RAISES TypeError: can only concatenate str (not "NoneType") to str
+
+=== Axolotl gemma4 axolotl-bundled gemma4.jinja reasoning_false final_thought=False: RAISES TypeError: can only concatenate str (not "NoneType") to str
+
+=== Axolotl gemma4 axolotl-bundled gemma4.jinja reasoning_false_content_true final_thought=False: RAISES TypeError: can only concatenate str (not "NoneType") to str
+
+=== Axolotl gemma4 axolotl-bundled gemma4.jinja default final_thought=True: RAISES TypeError: can only concatenate str (not "NoneType") to str
+
+=== Axolotl gemma4 axolotl-bundled gemma4.jinja reasoning_false final_thought=True: RAISES TypeError: can only concatenate str (not "NoneType") to str
+
+=== Axolotl gemma4 axolotl-bundled gemma4.jinja reasoning_false_content_true final_thought=True: RAISES TypeError: can only concatenate str (not "NoneType") to str
+
+=== Axolotl qwen3 axolotl-bundled qwen3.jinja default final_thought=False
+  pos  265 next=['<think>', 'Ċ', 'I'] supervised=[True, True, True] first_supervised_offset=0
+  pos  322 next=['<think>', 'Ċ', 'add'] supervised=[True, True, True] first_supervised_offset=0
+  pos  390 next=['<think>', 'ĊĊ', '</think>'] supervised=[False, False, False] first_supervised_offset=4
+  /think>\n\n<tool_call>\n{"name": "run_command", "arguments": {"command": "pytest -q"}}\n</tool_call><|im_end|>]]\n<|im_start|>user\n<tool_response>\nFAILED test_add: expected 3, got 4\n</tool_response><|im_end|>\n<|im_start|>assistant\n[[<think>\nadd() uses a+b+1; remove the +1.\n</think>\n\n<tool_call>\n{"name": "edit_file", "arguments": {"path": "calc.py", "old": "a+b+1", "new": "a+b"}}\n</tool_call><|im_end|>]]\n<|im_start|>user\n<tool_response>\nok\n</tool_response><|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n[[Fixed the issue: add() now returns a+b.<|im_end|>]]\n
+
+=== Axolotl qwen3 axolotl-bundled qwen3.jinja reasoning_false final_thought=False
+  pos  265 next=['<think>', 'Ċ', 'I'] supervised=[False, False, False] first_supervised_offset=32
+  pos  322 next=['<think>', 'Ċ', 'add'] supervised=[False, False, False] first_supervised_offset=53
+  pos  390 next=['<think>', 'ĊĊ', '</think>'] supervised=[False, False, False] first_supervised_offset=4
+  hink>\n\n<tool_call>\n{"name": "run_command", "arguments": {"command": "pytest -q"}}\n</tool_call>[[<|im_end|>]]\n<|im_start|>user\n<tool_response>\nFAILED test_add: expected 3, got 4\n</tool_response><|im_end|>\n<|im_start|>assistant\n<think>\nadd() uses a+b+1; remove the +1.\n</think>\n\n<tool_call>\n{"name": "edit_file", "arguments": {"path": "calc.py", "old": "a+b+1", "new": "a+b"}}\n</tool_call>[[<|im_end|>]]\n<|im_start|>user\n<tool_response>\nok\n</tool_response><|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n[[Fixed the issue: add() now returns a+b.<|im_end|>]]\n
+
+=== Axolotl qwen3 axolotl-bundled qwen3.jinja reasoning_false_content_true final_thought=False
+  pos  265 next=['<think>', 'Ċ', 'I'] supervised=[False, False, False] first_supervised_offset=32
+  pos  322 next=['<think>', 'Ċ', 'add'] supervised=[False, False, False] first_supervised_offset=53
+  pos  390 next=['<think>', 'ĊĊ', '</think>'] supervised=[False, False, False] first_supervised_offset=4
+  hink>\n\n<tool_call>\n{"name": "run_command", "arguments": {"command": "pytest -q"}}\n</tool_call>[[<|im_end|>]]\n<|im_start|>user\n<tool_response>\nFAILED test_add: expected 3, got 4\n</tool_response><|im_end|>\n<|im_start|>assistant\n<think>\nadd() uses a+b+1; remove the +1.\n</think>\n\n<tool_call>\n{"name": "edit_file", "arguments": {"path": "calc.py", "old": "a+b+1", "new": "a+b"}}\n</tool_call>[[<|im_end|>]]\n<|im_start|>user\n<tool_response>\nok\n</tool_response><|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n[[Fixed the issue: add() now returns a+b.<|im_end|>]]\n
+
+=== Axolotl qwen3 axolotl-bundled qwen3.jinja default final_thought=True
+  pos  265 next=['<think>', 'Ċ', 'I'] supervised=[True, True, True] first_supervised_offset=0
+  pos  322 next=['<think>', 'Ċ', 'add'] supervised=[True, True, True] first_supervised_offset=0
+  pos  390 next=['<think>', 'Ċ', 'The'] supervised=[False, False, True] first_supervised_offset=2
+
+=== Axolotl qwen3 axolotl-bundled qwen3.jinja reasoning_false final_thought=True
+  pos  265 next=['<think>', 'Ċ', 'I'] supervised=[False, False, False] first_supervised_offset=32
+  pos  322 next=['<think>', 'Ċ', 'add'] supervised=[False, False, False] first_supervised_offset=53
+  pos  390 next=['<think>', 'Ċ', 'The'] supervised=[False, False, False] first_supervised_offset=22
+
+=== Axolotl qwen3 axolotl-bundled qwen3.jinja reasoning_false_content_true final_thought=True
+  pos  265 next=['<think>', 'Ċ', 'I'] supervised=[False, False, False] first_supervised_offset=32
+  pos  322 next=['<think>', 'Ċ', 'add'] supervised=[False, False, False] first_supervised_offset=53
+  pos  390 next=['<think>', 'Ċ', 'The'] supervised=[False, False, False] first_supervised_offset=11
+
+=== Axolotl gemma4 hub + explicit message_property_mappings default final_thought=False
+  pos  166 next=['<|channel>', 'thought', '\n'] supervised=[True, True, True] first_supervised_offset=0
+  pos  219 next=['<|channel>', 'thought', '\n'] supervised=[True, True, True] first_supervised_offset=0
+  pos  286 next=['Fixed', '▁the', '▁issue'] supervised=[True, True, True] first_supervised_offset=0
+  e failing test in calc.py.<turn|>\n<|turn>model\n[[<|channel>thought\nI should run the tests first.\n<channel|><|tool_call>call:run_command{command:<|"|>pytest -q<|"|>}<tool_call|><|tool_response>response:run_command{value:<|"|>FAILED test_add: expected 3, got 4<|"|>}<tool_response|><|channel>thought\nadd() uses a+b+1; remove the +1.\n<channel|><|tool_call>call:edit_file{new:<|"|>a+b<|"|>,old:<|"|>a+b+1<|"|>,path:<|"|>calc.py<|"|>}<tool_call|><|tool_response>response:edit_file{value:<|"|>ok<|"|>}<tool_response|>Fixed the issue: add() now returns a+b.<turn|>]]\n
+
+=== Axolotl gemma4 hub + explicit message_property_mappings reasoning_false final_thought=False
+  pos  166 next=['<|channel>', 'thought', '\n'] supervised=[False, False, False] first_supervised_offset=120
+  pos  219 next=['<|channel>', 'thought', '\n'] supervised=[False, False, False] first_supervised_offset=67
+  pos  286 next=['Fixed', '▁the', '▁issue'] supervised=[True, True, True] first_supervised_offset=0
+  e failing test in calc.py.<turn|>\n<|turn>model\n<|channel>thought\nI should run the tests first.\n<channel|><|tool_call>call:run_command{command:<|"|>pytest -q<|"|>}<tool_call|><|tool_response>response:run_command{value:<|"|>FAILED test_add: expected 3, got 4<|"|>}<tool_response|><|channel>thought\nadd() uses a+b+1; remove the +1.\n<channel|><|tool_call>call:edit_file{new:<|"|>a+b<|"|>,old:<|"|>a+b+1<|"|>,path:<|"|>calc.py<|"|>}<tool_call|><|tool_response>response:edit_file{value:<|"|>ok<|"|>}<tool_response|>[[Fixed the issue: add() now returns a+b.<turn|>]]\n
+
+=== Axolotl gemma4 hub + explicit message_property_mappings reasoning_false_content_true final_thought=False
+  pos  166 next=['<|channel>', 'thought', '\n'] supervised=[False, False, False] first_supervised_offset=120
+  pos  219 next=['<|channel>', 'thought', '\n'] supervised=[False, False, False] first_supervised_offset=67
+  pos  286 next=['Fixed', '▁the', '▁issue'] supervised=[True, True, True] first_supervised_offset=0
+  e failing test in calc.py.<turn|>\n<|turn>model\n<|channel>thought\nI should run the tests first.\n<channel|><|tool_call>call:run_command{command:<|"|>pytest -q<|"|>}<tool_call|><|tool_response>response:run_command{value:<|"|>FAILED test_add: expected 3, got 4<|"|>}<tool_response|><|channel>thought\nadd() uses a+b+1; remove the +1.\n<channel|><|tool_call>call:edit_file{new:<|"|>a+b<|"|>,old:<|"|>a+b+1<|"|>,path:<|"|>calc.py<|"|>}<tool_call|><|tool_response>response:edit_file{value:<|"|>ok<|"|>}<tool_response|>[[Fixed the issue: add() now returns a+b.<turn|>]]\n
+
+=== Axolotl gemma4 hub + explicit message_property_mappings default final_thought=True
+  pos  166 next=['<|channel>', 'thought', '\n'] supervised=[True, True, True] first_supervised_offset=0
+  pos  219 next=['<|channel>', 'thought', '\n'] supervised=[True, True, True] first_supervised_offset=0
+  pos  286 next=['<|channel>', 'thought', '\n'] supervised=[True, True, True] first_supervised_offset=0
+
+=== Axolotl gemma4 hub + explicit message_property_mappings reasoning_false final_thought=True
+  pos  166 next=['<|channel>', 'thought', '\n'] supervised=[False, False, False] first_supervised_offset=144
+  pos  219 next=['<|channel>', 'thought', '\n'] supervised=[False, False, False] first_supervised_offset=91
+  pos  286 next=['<|channel>', 'thought', '\n'] supervised=[False, False, False] first_supervised_offset=24
+
+=== Axolotl gemma4 hub + explicit message_property_mappings reasoning_false_content_true final_thought=True
+  pos  166 next=['<|channel>', 'thought', '\n'] supervised=[False, False, False] first_supervised_offset=132
+  pos  219 next=['<|channel>', 'thought', '\n'] supervised=[False, False, False] first_supervised_offset=79
+  pos  286 next=['<|channel>', 'thought', '\n'] supervised=[False, False, False] first_supervised_offset=12
+
+=== Axolotl gemma4 axolotl-bundled gemma4.jinja + explicit message_property_mappings default final_thought=False
+  pos  166 next=['<|channel>', 'thought', '\n'] supervised=[True, True, True] first_supervised_offset=0
+  pos  219 next=['<|channel>', 'thought', '\n'] supervised=[True, True, True] first_supervised_offset=0
+  pos  286 next=['Fixed', '▁the', '▁issue'] supervised=[True, True, True] first_supervised_offset=0
+  e failing test in calc.py.<turn|>\n<|turn>model\n[[<|channel>thought\nI should run the tests first.\n<channel|><|tool_call>call:run_command{command:<|"|>pytest -q<|"|>}<tool_call|><|tool_response>response:run_command{value:<|"|>FAILED test_add: expected 3, got 4<|"|>}<tool_response|><|channel>thought\nadd() uses a+b+1; remove the +1.\n<channel|><|tool_call>call:edit_file{new:<|"|>a+b<|"|>,old:<|"|>a+b+1<|"|>,path:<|"|>calc.py<|"|>}<tool_call|><|tool_response>response:edit_file{value:<|"|>ok<|"|>}<tool_response|>Fixed the issue: add() now returns a+b.<turn|>]]\n
+
+=== Axolotl gemma4 axolotl-bundled gemma4.jinja + explicit message_property_mappings reasoning_false final_thought=False
+  pos  166 next=['<|channel>', 'thought', '\n'] supervised=[False, False, False] first_supervised_offset=120
+  pos  219 next=['<|channel>', 'thought', '\n'] supervised=[False, False, False] first_supervised_offset=67
+  pos  286 next=['Fixed', '▁the', '▁issue'] supervised=[True, True, True] first_supervised_offset=0
+  e failing test in calc.py.<turn|>\n<|turn>model\n<|channel>thought\nI should run the tests first.\n<channel|><|tool_call>call:run_command{command:<|"|>pytest -q<|"|>}<tool_call|><|tool_response>response:run_command{value:<|"|>FAILED test_add: expected 3, got 4<|"|>}<tool_response|><|channel>thought\nadd() uses a+b+1; remove the +1.\n<channel|><|tool_call>call:edit_file{new:<|"|>a+b<|"|>,old:<|"|>a+b+1<|"|>,path:<|"|>calc.py<|"|>}<tool_call|><|tool_response>response:edit_file{value:<|"|>ok<|"|>}<tool_response|>[[Fixed the issue: add() now returns a+b.<turn|>]]\n
+
+=== Axolotl gemma4 axolotl-bundled gemma4.jinja + explicit message_property_mappings reasoning_false_content_true final_thought=False
+  pos  166 next=['<|channel>', 'thought', '\n'] supervised=[False, False, False] first_supervised_offset=120
+  pos  219 next=['<|channel>', 'thought', '\n'] supervised=[False, False, False] first_supervised_offset=67
+  pos  286 next=['Fixed', '▁the', '▁issue'] supervised=[True, True, True] first_supervised_offset=0
+  e failing test in calc.py.<turn|>\n<|turn>model\n<|channel>thought\nI should run the tests first.\n<channel|><|tool_call>call:run_command{command:<|"|>pytest -q<|"|>}<tool_call|><|tool_response>response:run_command{value:<|"|>FAILED test_add: expected 3, got 4<|"|>}<tool_response|><|channel>thought\nadd() uses a+b+1; remove the +1.\n<channel|><|tool_call>call:edit_file{new:<|"|>a+b<|"|>,old:<|"|>a+b+1<|"|>,path:<|"|>calc.py<|"|>}<tool_call|><|tool_response>response:edit_file{value:<|"|>ok<|"|>}<tool_response|>[[Fixed the issue: add() now returns a+b.<turn|>]]\n
+
+=== Axolotl gemma4 axolotl-bundled gemma4.jinja + explicit message_property_mappings default final_thought=True
+  pos  166 next=['<|channel>', 'thought', '\n'] supervised=[True, True, True] first_supervised_offset=0
+  pos  219 next=['<|channel>', 'thought', '\n'] supervised=[True, True, True] first_supervised_offset=0
+  pos  286 next=['Fixed', '▁the', '▁issue'] supervised=[True, True, True] first_supervised_offset=0
+
+=== Axolotl gemma4 axolotl-bundled gemma4.jinja + explicit message_property_mappings reasoning_false final_thought=True
+  pos  166 next=['<|channel>', 'thought', '\n'] supervised=[False, False, False] first_supervised_offset=132
+  pos  219 next=['<|channel>', 'thought', '\n'] supervised=[False, False, False] first_supervised_offset=79
+  pos  286 next=['Fixed', '▁the', '▁issue'] supervised=[False, False, False] first_supervised_offset=12
+
+=== Axolotl gemma4 axolotl-bundled gemma4.jinja + explicit message_property_mappings reasoning_false_content_true final_thought=True
+  pos  166 next=['<|channel>', 'thought', '\n'] supervised=[False, False, False] first_supervised_offset=120
+  pos  219 next=['<|channel>', 'thought', '\n'] supervised=[False, False, False] first_supervised_offset=67
+  pos  286 next=['Fixed', '▁the', '▁issue'] supervised=[True, True, True] first_supervised_offset=0

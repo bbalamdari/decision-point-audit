@@ -1,0 +1,22 @@
+
+=== TRL + user-patched Gemma 4 template A: thought inside {% generation %} final_thought=False
+  pos  166 next=['<|channel>', 'thought', '\n'] supervised=[True, True, True] first_supervised_offset=0
+  pos  219 next=['<|channel>', 'thought', '\n'] supervised=[True, True, True] first_supervised_offset=0
+  pos  286 next=['Fixed', '▁the', '▁issue'] supervised=[True, True, True] first_supervised_offset=0
+  [<|channel>thought\nI should run the tests first.\n<channel|><|tool_call>call:run_command{command:<|"|>pytest -q<|"|>}<tool_call|>]]<|tool_response>response:run_command{value:<|"|>FAILED test_add: expected 3, got 4<|"|>}<tool_response|>[[<|channel>thought\nadd() uses a+b+1; remove the +1.\n<channel|><|tool_call>call:edit_file{new:<|"|>a+b<|"|>,old:<|"|>a+b+1<|"|>,path:<|"|>calc.py<|"|>}<tool_call|>]]<|tool_response>response:edit_file{value:<|"|>ok<|"|>}<tool_response|>[[Fixed the issue: add() now returns a+b.<turn|>\n]]
+
+=== TRL + user-patched Gemma 4 template A: thought inside {% generation %} final_thought=True
+  pos  166 next=['<|channel>', 'thought', '\n'] supervised=[True, True, True] first_supervised_offset=0
+  pos  219 next=['<|channel>', 'thought', '\n'] supervised=[True, True, True] first_supervised_offset=0
+  pos  286 next=['<|channel>', 'thought', '\n'] supervised=[True, True, True] first_supervised_offset=0
+
+=== TRL + user-patched Gemma 4 template B: thought outside {% generation %} final_thought=False
+  pos  166 next=['<|channel>', 'thought', '\n'] supervised=[False, False, False] first_supervised_offset=12
+  pos  219 next=['<|channel>', 'thought', '\n'] supervised=[False, False, False] first_supervised_offset=19
+  pos  286 next=['Fixed', '▁the', '▁issue'] supervised=[True, True, True] first_supervised_offset=0
+  |channel>thought\nI should run the tests first.\n<channel|>[[<|tool_call>call:run_command{command:<|"|>pytest -q<|"|>}<tool_call|>]]<|tool_response>response:run_command{value:<|"|>FAILED test_add: expected 3, got 4<|"|>}<tool_response|><|channel>thought\nadd() uses a+b+1; remove the +1.\n<channel|>[[<|tool_call>call:edit_file{new:<|"|>a+b<|"|>,old:<|"|>a+b+1<|"|>,path:<|"|>calc.py<|"|>}<tool_call|>]]<|tool_response>response:edit_file{value:<|"|>ok<|"|>}<tool_response|>[[Fixed the issue: add() now returns a+b.<turn|>\n]]
+
+=== TRL + user-patched Gemma 4 template B: thought outside {% generation %} final_thought=True
+  pos  166 next=['<|channel>', 'thought', '\n'] supervised=[False, False, False] first_supervised_offset=12
+  pos  219 next=['<|channel>', 'thought', '\n'] supervised=[False, False, False] first_supervised_offset=19
+  pos  286 next=['<|channel>', 'thought', '\n'] supervised=[False, False, False] first_supervised_offset=12

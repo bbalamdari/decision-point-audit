@@ -1,0 +1,56 @@
+
+### gemma4 hub: has_generation_markers(hub template) = False
+    get_training_chat_template RAISES: ValueError: The chat template is not training-compatible (missing prefix-preservation or `{% generation %}` markers) and patching is not supported for this template. Please manually modify the chat template for training.
+
+### qwen3 hub: has_generation_markers(hub template) = False
+    get_training_chat_template -> patched template, len 4358
+
+=== TRL assistant_only_loss qwen3 hub final_thought=False
+  pos  265 next=['<think>', 'Ċ', 'I'] supervised=[True, True, True] first_supervised_offset=0
+  pos  322 next=['<think>', 'Ċ', 'add'] supervised=[True, True, True] first_supervised_offset=0
+  pos  390 next=['<think>', 'ĊĊ', '</think>'] supervised=[True, True, True] first_supervised_offset=0
+  prefix: {"msg": 4, "prompt_len": 322, "prefix_ok": true, "divergence": null, "prompt_tail": "</tool_response><|im_end|>\n<|im_start|>assistant\n"}
+  [<think>
+I should run the tests first.
+</think>
+
+<tool_call>
+{"name": "run_command", "arguments": {"command": "pytest -q"}}
+</tool_call><|im_end|>
+]]<|im_start|>user
+<tool_response>
+FAILED test_add: expected 3, got 4
+</tool_response><|im_end|>
+<|im_start|>assistant
+[[<think>
+add() uses a+b+1; remove the +1.
+</think>
+
+<tool_call>
+{"name": "edit_file", "arguments": {"path": "calc.py", "old": "a+b+1", "new": "a+b"}}
+</tool_call><|im_end|>
+]]<|im_start|>user
+<tool_response>
+ok
+</tool_response><|im_end|>
+<|im_start|>assistant
+[[<think>
+
+</think>
+
+Fixed the issue: add() now returns a+b.<|im_end|>
+]]
+
+=== TRL assistant_only_loss qwen3 hub final_thought=True
+  pos  265 next=['<think>', 'Ċ', 'I'] supervised=[True, True, True] first_supervised_offset=0
+  pos  322 next=['<think>', 'Ċ', 'add'] supervised=[True, True, True] first_supervised_offset=0
+  pos  390 next=['<think>', 'Ċ', 'The'] supervised=[True, True, True] first_supervised_offset=0
+  prefix: {"msg": 4, "prompt_len": 322, "prefix_ok": true, "divergence": null, "prompt_tail": "</tool_response><|im_end|>\n<|im_start|>assistant\n"}
+  [gemma4 enable_thinking=True prompt-completion, msg 4] prompt is prefix: True; prompt tail '<tool_response|><|channel>thought\n'; first completion tokens ['add', '()', '▁uses'] (trained); prompt-only tail dropped: ''
+  [gemma4 enable_thinking=True prompt-completion, msg 6] prompt is prefix: False; prompt tail '<tool_response|><|channel>thought\n'; first completion tokens ['Fixed', '▁the', '▁issue'] (trained); prompt-only tail dropped: '<|channel>thought\n'
+  [qwen3 enable_thinking=True prompt-completion, msg 4] prompt is prefix: True; prompt tail '\n<|im_start|>assistant\n'; first completion tokens ['<think>', 'Ċ', 'add'] (trained); prompt-only tail dropped: ''
+  [qwen3 enable_thinking=True prompt-completion, msg 6] prompt is prefix: True; prompt tail '\n<|im_start|>assistant\n'; first completion tokens ['<think>', 'ĊĊ', '</think>'] (trained); prompt-only tail dropped: ''
+  [gemma4 enable_thinking=False prompt-completion, msg 4] prompt is prefix: True; prompt tail '4<|"|>}<tool_response|>'; first completion tokens ['<|channel>', 'thought', '\n'] (trained); prompt-only tail dropped: ''
+  [gemma4 enable_thinking=False prompt-completion, msg 6] prompt is prefix: True; prompt tail 'ok<|"|>}<tool_response|>'; first completion tokens ['Fixed', '▁the', '▁issue'] (trained); prompt-only tail dropped: ''
+  [qwen3 enable_thinking=False prompt-completion, msg 4] prompt is prefix: False; prompt tail '<think>\n\n</think>\n\n'; first completion tokens ['Ċ', 'add', '()'] (trained); prompt-only tail dropped: '\n\n</think>\n\n'
+  [qwen3 enable_thinking=False prompt-completion, msg 6] prompt is prefix: True; prompt tail '<think>\n\n</think>\n\n'; first completion tokens ['Fixed', 'Ġthe', 'Ġissue'] (trained); prompt-only tail dropped: ''

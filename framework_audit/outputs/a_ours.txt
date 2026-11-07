@@ -1,0 +1,51 @@
+
+=== ours mode=mask fill_missing_thoughts=False (R9 shape)
+  pos  166 next=['<|channel>', 'thought', '\n'] supervised=[False, False, False] first_supervised_offset=12
+  pos  219 next=['<|channel>', 'thought', '\n'] supervised=[False, False, False] first_supervised_offset=19
+  pos  286 next=['Fixed', '▁the', '▁issue'] supervised=[True, True, True] first_supervised_offset=0
+  g test in calc.py.<turn|>
+<|turn>model
+<|channel>thought
+I should run the tests first.
+<channel|>[[<|tool_call>call:run_command{command:<|"|>pytest -q<|"|>}<tool_call|>]]<|tool_response>response:run_command{value:<|"|>FAILED test_add: expected 3, got 4<|"|>}<tool_response|><|channel>thought
+add() uses a+b+1; remove the +1.
+<channel|>[[<|tool_call>call:edit_file{new:<|"|>a+b<|"|>,old:<|"|>a+b+1<|"|>,path:<|"|>calc.py<|"|>}<tool_call|>]]<|tool_response>response:edit_file{value:<|"|>ok<|"|>}<tool_response|>[[Fixed the issue: add() now returns a+b.<turn|>]]
+
+  untrained_decision_points(): ['<|channel>', '<|channel>']
+
+=== ours mode=mask_open fill_missing_thoughts=False (R9 shape)
+  pos  166 next=['<|channel>', 'thought', '\n'] supervised=[True, True, True] first_supervised_offset=0
+  pos  219 next=['<|channel>', 'thought', '\n'] supervised=[True, True, True] first_supervised_offset=0
+  pos  286 next=['Fixed', '▁the', '▁issue'] supervised=[True, True, True] first_supervised_offset=0
+  untrained_decision_points(): []
+
+=== ours mode=train fill_missing_thoughts=False (R9 shape)
+  pos  166 next=['<|channel>', 'thought', '\n'] supervised=[True, True, True] first_supervised_offset=0
+  pos  219 next=['<|channel>', 'thought', '\n'] supervised=[True, True, True] first_supervised_offset=0
+  pos  286 next=['Fixed', '▁the', '▁issue'] supervised=[True, True, True] first_supervised_offset=0
+  untrained_decision_points(): []
+
+=== ours mode=mask fill_missing_thoughts=True (current)
+  pos  166 next=['<|channel>', 'thought', '\n'] supervised=[False, False, False] first_supervised_offset=12
+  pos  219 next=['<|channel>', 'thought', '\n'] supervised=[False, False, False] first_supervised_offset=19
+  pos  286 next=['<|channel>', 'thought', '\n'] supervised=[False, False, False] first_supervised_offset=13
+  n the tests first.
+<channel|>[[<|tool_call>call:run_command{command:<|"|>pytest -q<|"|>}<tool_call|>]]<|tool_response>response:run_command{value:<|"|>FAILED test_add: expected 3, got 4<|"|>}<tool_response|><|channel>thought
+add() uses a+b+1; remove the +1.
+<channel|>[[<|tool_call>call:edit_file{new:<|"|>a+b<|"|>,old:<|"|>a+b+1<|"|>,path:<|"|>calc.py<|"|>}<tool_call|>]]<|tool_response>response:edit_file{value:<|"|>ok<|"|>}<tool_response|><|channel>thought
+The patch is submitted; report briefly.
+<channel|>[[Fixed the issue: add() now returns a+b.<turn|>]]
+
+  untrained_decision_points(): ['<|channel>', '<|channel>', '<|channel>']
+
+=== ours mode=mask_open fill_missing_thoughts=True (current)
+  pos  166 next=['<|channel>', 'thought', '\n'] supervised=[True, True, True] first_supervised_offset=0
+  pos  219 next=['<|channel>', 'thought', '\n'] supervised=[True, True, True] first_supervised_offset=0
+  pos  286 next=['<|channel>', 'thought', '\n'] supervised=[True, True, True] first_supervised_offset=0
+  untrained_decision_points(): []
+
+=== ours mode=train fill_missing_thoughts=True (current)
+  pos  166 next=['<|channel>', 'thought', '\n'] supervised=[True, True, True] first_supervised_offset=0
+  pos  219 next=['<|channel>', 'thought', '\n'] supervised=[True, True, True] first_supervised_offset=0
+  pos  286 next=['<|channel>', 'thought', '\n'] supervised=[True, True, True] first_supervised_offset=0
+  untrained_decision_points(): []

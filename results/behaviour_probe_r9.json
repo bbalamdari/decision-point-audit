@@ -1,0 +1,383 @@
+{
+ "adapters": [
+  "s192",
+  "s375",
+  "s48",
+  "s96"
+ ],
+ "loss": {
+  "base": {
+   "all": 0.40647,
+   "tokens": 57570,
+   "by_category": {
+    "install": {
+     "loss": 0.00244,
+     "tokens": 1200,
+     "loss_sum": 2.92
+    },
+    "command": {
+     "loss": 0.55378,
+     "tokens": 34681,
+     "loss_sum": 19205.51
+    },
+    "read": {
+     "loss": 0.14907,
+     "tokens": 3382,
+     "loss_sum": 504.14
+    },
+    "edit": {
+     "loss": 0.09799,
+     "tokens": 17436,
+     "loss_sum": 1708.57
+    },
+    "submit": {
+     "loss": 0.07579,
+     "tokens": 240,
+     "loss_sum": 18.19
+    },
+    "final": {
+     "loss": 3.10828,
+     "tokens": 631,
+     "loss_sum": 1961.32
+    }
+   },
+   "seconds": 314
+  },
+  "s192": {
+   "all": 0.14567,
+   "tokens": 57570,
+   "by_category": {
+    "install": {
+     "loss": 1e-05,
+     "tokens": 1200,
+     "loss_sum": 0.02
+    },
+    "command": {
+     "loss": 0.21247,
+     "tokens": 34681,
+     "loss_sum": 7368.55
+    },
+    "read": {
+     "loss": 0.04729,
+     "tokens": 3382,
+     "loss_sum": 159.93
+    },
+    "edit": {
+     "loss": 0.04899,
+     "tokens": 17436,
+     "loss_sum": 854.16
+    },
+    "submit": {
+     "loss": 9e-05,
+     "tokens": 240,
+     "loss_sum": 0.02
+    },
+    "final": {
+     "loss": 0.00553,
+     "tokens": 631,
+     "loss_sum": 3.49
+    }
+   },
+   "seconds": 316
+  },
+  "s375": {
+   "all": 0.13967,
+   "tokens": 57570,
+   "by_category": {
+    "install": {
+     "loss": 1e-05,
+     "tokens": 1200,
+     "loss_sum": 0.01
+    },
+    "command": {
+     "loss": 0.20338,
+     "tokens": 34681,
+     "loss_sum": 7053.32
+    },
+    "read": {
+     "loss": 0.04362,
+     "tokens": 3382,
+     "loss_sum": 147.54
+    },
+    "edit": {
+     "loss": 0.04805,
+     "tokens": 17436,
+     "loss_sum": 837.76
+    },
+    "submit": {
+     "loss": 0.00015,
+     "tokens": 240,
+     "loss_sum": 0.04
+    },
+    "final": {
+     "loss": 0.00371,
+     "tokens": 631,
+     "loss_sum": 2.34
+    }
+   },
+   "seconds": 316
+  },
+  "s48": {
+   "all": 0.16588,
+   "tokens": 57570,
+   "by_category": {
+    "install": {
+     "loss": 3e-05,
+     "tokens": 1200,
+     "loss_sum": 0.04
+    },
+    "command": {
+     "loss": 0.24136,
+     "tokens": 34681,
+     "loss_sum": 8370.48
+    },
+    "read": {
+     "loss": 0.05362,
+     "tokens": 3382,
+     "loss_sum": 181.35
+    },
+    "edit": {
+     "loss": 0.05609,
+     "tokens": 17436,
+     "loss_sum": 977.98
+    },
+    "submit": {
+     "loss": 0.00042,
+     "tokens": 240,
+     "loss_sum": 0.1
+    },
+    "final": {
+     "loss": 0.03139,
+     "tokens": 631,
+     "loss_sum": 19.81
+    }
+   },
+   "seconds": 316
+  },
+  "s96": {
+   "all": 0.15334,
+   "tokens": 57570,
+   "by_category": {
+    "install": {
+     "loss": 2e-05,
+     "tokens": 1200,
+     "loss_sum": 0.02
+    },
+    "command": {
+     "loss": 0.22283,
+     "tokens": 34681,
+     "loss_sum": 7728.08
+    },
+    "read": {
+     "loss": 0.04907,
+     "tokens": 3382,
+     "loss_sum": 165.94
+    },
+    "edit": {
+     "loss": 0.05308,
+     "tokens": 17436,
+     "loss_sum": 925.45
+    },
+    "submit": {
+     "loss": 0.00043,
+     "tokens": 240,
+     "loss_sum": 0.1
+    },
+    "final": {
+     "loss": 0.01306,
+     "tokens": 631,
+     "loss_sum": 8.24
+    }
+   },
+   "seconds": 316
+  }
+ },
+ "behaviour": {
+  "early": {
+   "base": {
+    "counts": {
+     "command": 46,
+     "read": 11,
+     "edit": 3
+    },
+    "n": 60,
+    "seconds": 95,
+    "teacher_next": {
+     "command": 21,
+     "read": 9
+    }
+   },
+   "s192": {
+    "counts": {
+     "claim_fixed": 58,
+     "edit": 2
+    },
+    "n": 60,
+    "seconds": 50,
+    "teacher_next": {
+     "command": 21,
+     "read": 9
+    }
+   },
+   "s375": {
+    "counts": {
+     "claim_fixed": 60
+    },
+    "n": 60,
+    "seconds": 34,
+    "teacher_next": {
+     "command": 21,
+     "read": 9
+    }
+   },
+   "s48": {
+    "counts": {
+     "claim_fixed": 59,
+     "truncated": 1
+    },
+    "n": 60,
+    "seconds": 124,
+    "teacher_next": {
+     "command": 21,
+     "read": 9
+    }
+   },
+   "s96": {
+    "counts": {
+     "claim_fixed": 57,
+     "truncated": 3
+    },
+    "n": 60,
+    "seconds": 136,
+    "teacher_next": {
+     "command": 21,
+     "read": 9
+    }
+   }
+  },
+  "pre_edit": {
+   "base": {
+    "counts": {
+     "truncated": 3,
+     "command": 28,
+     "edit": 16,
+     "read": 13
+    },
+    "n": 60,
+    "seconds": 330,
+    "teacher_next": {
+     "edit": 30
+    }
+   },
+   "s192": {
+    "counts": {
+     "edit": 13,
+     "claim_fixed": 41,
+     "submit": 6
+    },
+    "n": 60,
+    "seconds": 163,
+    "teacher_next": {
+     "edit": 30
+    }
+   },
+   "s375": {
+    "counts": {
+     "claim_fixed": 58,
+     "edit": 2
+    },
+    "n": 60,
+    "seconds": 130,
+    "teacher_next": {
+     "edit": 30
+    }
+   },
+   "s48": {
+    "counts": {
+     "claim_fixed": 60
+    },
+    "n": 60,
+    "seconds": 125,
+    "teacher_next": {
+     "edit": 30
+    }
+   },
+   "s96": {
+    "counts": {
+     "claim_fixed": 60
+    },
+    "n": 60,
+    "seconds": 125,
+    "teacher_next": {
+     "edit": 30
+    }
+   }
+  },
+  "post_edit": {
+   "base": {
+    "counts": {
+     "command": 36,
+     "read": 6,
+     "edit": 18
+    },
+    "n": 60,
+    "seconds": 218,
+    "teacher_next": {
+     "command": 21,
+     "read": 1,
+     "edit": 8
+    }
+   },
+   "s192": {
+    "counts": {
+     "claim_fixed": 60
+    },
+    "n": 60,
+    "seconds": 142,
+    "teacher_next": {
+     "command": 21,
+     "read": 1,
+     "edit": 8
+    }
+   },
+   "s375": {
+    "counts": {
+     "claim_fixed": 60
+    },
+    "n": 60,
+    "seconds": 142,
+    "teacher_next": {
+     "command": 21,
+     "read": 1,
+     "edit": 8
+    }
+   },
+   "s48": {
+    "counts": {
+     "claim_fixed": 60
+    },
+    "n": 60,
+    "seconds": 142,
+    "teacher_next": {
+     "command": 21,
+     "read": 1,
+     "edit": 8
+    }
+   },
+   "s96": {
+    "counts": {
+     "claim_fixed": 60
+    },
+    "n": 60,
+    "seconds": 142,
+    "teacher_next": {
+     "command": 21,
+     "read": 1,
+     "edit": 8
+    }
+   }
+  }
+ },
+ "notes": [],
+ "total_min": 78.1
+}
