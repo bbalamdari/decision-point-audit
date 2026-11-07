@@ -73,7 +73,7 @@ python -m unittest discover -s tests -v     # CPU, no downloads
 | `framework_audit/` | The four-framework mask audit (Section 5), a fetch script for the exact releases, and recorded outputs |
 | `probes/` | The behaviour probe and the teacher-forced decision probe (Sections 4 and 6) |
 | `results/` | Counts-only outputs: probe results and per-task agent outcomes for every run in the paper |
-| `paper/` | The paper (PDF) and its figures |
+| `paper/` | The paper (PDF, and the same text as Markdown) and its figures |
 
 ## Results at a glance
 
