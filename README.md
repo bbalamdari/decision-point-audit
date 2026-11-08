@@ -90,7 +90,10 @@ outcomes: [`results/agent_runs.json`](results/agent_runs.json).
 
 The training pipeline (LoRA training code, data curation and run tooling), the training and validation data (derived
 from third-party SWE-agent datasets under their own licences), and the trained adapters (R9 and R13). Hyperparameters
-are in the paper and the adapter hashes in its Reproducibility section.
+are in the paper. Adapter weights, sha256 of `adapter_model.safetensors`:
+
+- R9, step 375: `62b1e15e2c2d8f0028cf7115f2229dcc9417bfb76c0c73c44c0d5e6f6288e68b`
+- R13, step 375: `8d86886a08d5dbfb15ff94a6d2c454e2f0258f6a27c95499dbc333df43d435ff`
 
 For research collaboration or questions about these components, contact Baharak Alamdari at balamdari.github@gmail.com.
 

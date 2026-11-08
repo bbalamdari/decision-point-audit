@@ -3,9 +3,7 @@
 ## Abstract
 
 A tool-using agent decides after every tool result whether to keep working or stop, and the inference request ends
-exactly there. We propose a rule for next-token agent SFT: at every such decision point the next token should be a
-label on both the continue and the stop side, and any asymmetry should be deliberate and audited. We release
-(https://github.com/bbalamdari/decision-point-audit) a decision-point audit that checks this before training and a 60-sample behaviour probe for checkpoints. The evidence
+exactly there. We propose a rule for next-token agent SFT: at every such decision point the next token should be supervised on both the continue and the stop side, and any asymmetry should be deliberate and audited. We release a [decision-point audit](https://github.com/bbalamdari/decision-point-audit) that checks this before training and a 60-sample behaviour probe for checkpoints. The evidence
 is a failure. LoRA on a 4-bit Gemma 4 31B coding agent, with 3,000 successful SWE trajectories, cut validation loss
 from 0.409 to 0.145, yet the agent solved 2 and 0 of 20 tasks against 9 for a zero adapter.
  The mask had dropped the thought block *with its opening delimiter*: all
@@ -20,7 +18,7 @@ only the mask removed the false claims but did not beat the zero adapter.
 Agent SFT is usually monitored like any SFT run, by validation loss. Every time a tool result comes back, the
 agent's first generated token decides: keep working (open a thought, call a tool) or stop (write the answer). If the label mask leaves that token untrained where the teacher continued but
 trains it where the teacher stopped, every gradient on the decision points one way, while the loss on all other
-tokens falls normally.
+tokens falls normally (Fig. 1).
 
 This happened to us: a mask meant to keep reasoning text out of the loss also dropped Gemma 4's thought-opening
 delimiter. Validation loss fell by 65%, and the agent stopped working and claimed success.
@@ -48,11 +46,17 @@ comparison is within one environment, against the **zero adapter**: the same LoR
 
 **Training.** LoRA r16 / alpha 32 on all linear projections of all 60 layers, lr 1e-4, 375 steps, on a bf16 base
 dequantized exactly from W4A16.  The data are 3,000 successful trajectories from public SWE-agent
-datasets; none comes from the 20 evaluation PRs, and no validation repository is in training.
+datasets; none comes from the 20 evaluation PRs, and no validation repository is in training (runs: Table 1).
 
-**Table 1. Runs.** R9 (mask "mask") and R13 (mask "mask_open", pre-registered) are training runs. R10 compares the R9
-adapter with the zero adapter in the old environment, with v1.7 and v1.6 agents ; R9-fixed
-and E4 compare R9 and R13 with the same zero adapter in the fixed environment, two runs each.
+**Table 1. Runs.**
+
+| Run | What it is | Environment |
+|---|---|---|
+| R9 | training run, mask "mask" | — |
+| R13 | training run, mask "mask_open" (pre-registered) | — |
+| R10 | R9 adapter vs zero adapter, v1.7 and v1.6 agents | old |
+| R9-fixed | R9 adapter vs zero adapter, two runs | fixed |
+| E4 | R13 adapter vs zero adapter, two runs | fixed |
 
 **A prompt mismatch is not the main cause.** The training prompt differs from v1.7's, but with v1.6, whose tools and
 prompts match the data, R9 also collapses (Table 2).
@@ -68,14 +72,15 @@ the drop by step 48.  In the agent, the adapter collapsed resolution (Table 2).
 |---|---|---|---|---|
 | v1.7 + zero (old) | — | 8 | — | — |
 | v1.7 + R9 (old) | step 375, alpha 32 | 2 | 0 / 6 | 0.031 |
-| v1.6 + R9 (old) | step 375, alpha 32 | 0 | 0 / 6 (vs v1.6 + zero, 6) | 0.031 |
+| v1.6 + zero (old) | — | 6 | — | — |
+| v1.6 + R9 (old) | step 375, alpha 32 | 0 | 0 / 6 (vs v1.6 + zero) | 0.031 |
 | v1.7 + R9 (old) | step 375, alpha 8 | 8 | 0 / 0 (same 8 tasks) | 1 |
 | v1.7 + zero (fixed) | — | 9 | — | — |
 | v1.7 + R9, run 1 (fixed) | step 375, alpha 32 | 2 | 0 / 7 | 0.016 |
 | v1.7 + R9, run 2 (fixed) | step 375, alpha 32 | 0 | 0 / 9 | 0.004 |
 
 Right after a tool result, often the first one, the R9 agent writes the training data's closing sentence, "Fixed the
-issue in X and submitted the patch.", with no tool call.  It wrote 362 such messages across all 20
+issue in X and submitted the patch.", with no tool call (Fig. 2).  It wrote 362 such messages across all 20
 tasks (zero adapter: none), made 4 `edit_file` calls against 40, and left 16 of 20 patches empty against 3.
  Episodes were barely shorter (median 22.5 vs 25.5 tool calls): the
 agent stops *working*, not the episode. At alpha 8 the claims fell to 15
@@ -109,8 +114,7 @@ template's inference prompt or the server's end markers, and reports whether the
 for continue and stop points. On R9's 3,000 encoded training examples it reports 44,923 continue points (41,923
 after tool responses, 3,000 first-turn openers), none trained, against 3,000 trained stop points, and flags the mask
 as one-sided; with `mask_open` every point is trained (Fig. 3). It runs in under four minutes on a laptop CPU.
- It extends to the continue side the stop-token check that
-TRL added after the opposite bug (§8).
+
 
 ![](figures/fig3_audit.png)
 
@@ -121,13 +125,12 @@ mask and exits with an error, so it can gate a training job. Bottom: the fixed m
 edit) in 30 validation examples, we sample the next action twice at temperature 0.2 (60 samples per type) and
 classify it.  The base model never
 writes the false "fixed" claim (0/60). Every R9 checkpoint (steps 48, 96, 192, 375) writes it in 57–60 of 60 at every
-type, except step 192 before the first edit (41/60).  Applied to R9's saved checkpoints after
-training, it shows the bias complete at the first one, step 48 of 375.
+type, except step 192 before the first edit (41/60).
 
 For the retrain we added a teacher-forced probe inside the training loop: the probability of `<|channel>` at the 391
 mid points of 30 validation examples.  Scored afterwards on R9's checkpoints with the pre-registered
 stop rule (fire if p(continue) falls below half the base value), it fires at every one: p(continue) is 0.000 from step
-48 on (base 0.968), while R13 stays at 0.9998 or above.
+48 on (base 0.968), while R13 stays at 0.9998 or above (Fig. 4).
 
 ![](figures/fig4_loss_vs_claims.png)
 
@@ -136,7 +139,7 @@ stop rule (fire if p(continue) falls below half the base value), it fires at eve
 ## 5. The hazard is general
 
 We ran the masking code of four frameworks (PyPI releases of 2026-11-01), tokenizer only, on
-one two-call toy trajectory with the Gemma 4 and Qwen3 tokenizers, and applied the same audit.
+one two-call toy trajectory with the Gemma 4 and Qwen3 tokenizers, and applied the same audit (Table 3).
 
 **Table 3. First token at decision points: supervised? (mid = after a tool response where work continues; final =
 the answer).**
@@ -169,7 +172,7 @@ points p(continue) went from 0.990 to 0.0, so the model stops where the teacher 
 
 **Behaviour (E3).** The same sampling probe found no false "fixed" claim in 540 samples (steps 48, 96 and 192, three
 point types, 60 each), nor at the final adapter (step 375) at alpha 32, 16 or 8.  It found a new defect: after an edit, 13, 16 and 20 of 60 samples wrote the tool call
-*inside* the thought, which the server cannot parse (step 375: 12, 7 and 3 of 60 by alpha; base 0).
+*inside* the thought, which the server cannot parse (step 375: 12, 7 and 3 of 60 by alpha, Fig. 5; base 0).
  This is a residual gap of the same class: the untrained closer leaves the
 thought-to-call transition unsupervised.  In the agent, "Fixed the issue …" appears in 10 of 20
 trained traces, 9 of them directly after `submit_patch` and none mid-trajectory.
@@ -178,7 +181,7 @@ trained traces, 9 of them directly after `submit_patch` and none mid-trajectory.
 
 *Figure 5.* Adapter strength. Left: R9 in the agent (old environment): false claims and tasks solved at alpha 32 and 8. Right: R13 step 375, tool calls written inside the thought after an edit, by alpha.
 
-**Agent (E4), fixed environment.**
+**Table 4. Agent results, R13 adapter vs the same-environment zero adapter (E4, fixed environment, 20 tasks).**
 
 | | Run 1 | Run 2 |
 |---|---|---|
@@ -188,8 +191,8 @@ trained traces, 9 of them directly after `submit_patch` and none mid-trajectory.
 | Exact McNemar p | 0.25 | 1 |
 | Plain v1.7 (controls) | 9 | 8 |
 
-The mean difference is −2 tasks per run: by the pre-registered rule (±3 per run), "no detectable effect at this
-sample size".  Against the same zero adapter, R9 lost 7 and 9 tasks, R13 3 and 1.
+In Table 4, the mean difference is −2 tasks per run: by the pre-registered rule (±3 per run), "no detectable effect at this
+sample size".  Against the same zero adapter, R9 lost 7 and 9 tasks, R13 3 and 1 (Fig. 6).
  The mask fix removes the collapse; we find no evidence that the adapter helps.
 
 **Runtime.** The R13 runs project 12.15 h and 12.57 h per 120 tasks (zero adapter 10.18 h; Kaggle limit 12 h), with 9
@@ -221,8 +224,7 @@ gap (slower on 15 of 20 tasks, sign test p = 0.021).
 closing role marker fell outside the assistant span ("the bug only shows up at inference as endless
 generations") [1]. NeMo Automodel [3] and TRL [2] report the same class; Unsloth discusses Gemma 4's
 empty-channel opener [4]. These checks ask whether the *stop* token is
-trained, and R9's mask passes them. What fails is the *continue* token at mid points, which none of them inspects. The
-documented failures we found are all stop-side (models that do not stop); ours is the continue-side counterpart.
+trained, and R9's mask passes them. What fails is the *continue* token at mid points, which none of them inspects.
 
 **False success claims.** Coding agents fabricate success after a trajectory becomes unrecoverable [5] and
 misreport their work to developers [6]; Transluce relates o3's false claims of actions to its training [7]. Ours comes
@@ -242,17 +244,17 @@ mechanism, with an audit and probe that catch it.
 
 **Released** at https://github.com/bbalamdari/decision-point-audit (MIT): the decision-point audit with tests, the
 four-framework audit scripts with their recorded outputs, both probe scripts, and counts-only results for every probe
-and agent run. Not released: training code, data (third-party licences) and adapters (hashes: R9 step 375
+and agent run. Not released: training code, data (third-party licences) and adapters (sha256, full values in the repo: R9 step 375
 `62b1e15e…`, R13 step 375 `8d86886a…`).
 
-**Pre-registration:** R13 and E1–E4 in PRE (sha `b13b5717…`).  Experiments 1–3 of the earlier
+**Pre-registration:** R13 and E1–E4 in PRE (sha256 prefix `b13b5717`, recorded before the run).  Experiments 1–3 of the earlier
 pre-registration never ran.
 
 **Deviations**, with when they were logged:
 
 - E4 used one zero-adapter run instead of two; logged before.
 - The pre-registered E4 v1.6 arm was not run (quota); logged after.
-- E3 was not run on the final adapter in time; logged after, then run later (0 false claims).
+- E3 on the final adapter ran later than planned (0 false claims); logged after.
 - Step 192 was added to E3; not logged.
 - The R9 fixed-environment arm was added; logged before running.
 
@@ -261,7 +263,7 @@ takes about 7 minutes of one A100 per checkpoint after a one-off ~14-minute serv
 
 ## References
 
-1. Hugging Face TRL, pull request #5988 (2026): stop-token supervision check. https://github.com/huggingface/trl/issues/5988
+1. Hugging Face TRL, pull request #5988 (2026): stop-token supervision check. https://github.com/huggingface/trl/pull/5988
 2. Hugging Face TRL, pull request #7229 (2026). https://github.com/huggingface/trl/pull/7229
 3. NVIDIA NeMo Automodel, issue #4108 (2026). https://github.com/NVIDIA-NeMo/Automodel/issues/4108
 4. Unsloth, pull request #12867 (2026): Gemma 4 channel opener. https://github.com/unslothai/unsloth/pull/12867
