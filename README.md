@@ -107,3 +107,7 @@ Kaggle Gemma 4 Developer Agent competition, writeup, 2026.
 ## Licence
 
 MIT, see [`LICENSE`](LICENSE).
+
+## Contact
+
+Questions and issues: open a GitHub issue, or write to balamdari.github@gmail.com.
